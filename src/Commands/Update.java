@@ -11,7 +11,7 @@ public class Update implements Command {
     }
 
     @Override
-    public void execute(String key) {
-        
+    public void execute(String[] key) {
+        collection.update(Integer.parseInt(key[0]), key[1]);
     }
 }

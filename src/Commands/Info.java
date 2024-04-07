@@ -12,6 +12,6 @@ public class Info implements Command {
 
     @Override
     public void execute(String[] str) {
-
+        System.out.println("Тип коллекции: " + collection.getType() + ", дата инициализации: " + collection.getInitializationDate() + ", размер коллекции: " + collection.getNumb());
     }
 }

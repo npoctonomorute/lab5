@@ -23,9 +23,9 @@ public class Help implements Command {
         System.out.println("exit : завершить программу (без сохранения в файл)");
         System.out.println("remove_greater ({element}) : удалить из коллекции все элементы, превышающие заданный");
         System.out.println("remove_lower ({element}) : удалить из коллекции все элементы, меньшие, чем заданный");
-        System.out.println("replace_if_greater null ({element}) : заменить значение по ключу, если новое значение больше старого");
+        System.out.println("replace_if_greater (null {element}) : заменить значение по ключу, если новое значение больше старого");
         System.out.println("remove_all_by_position (position) : удалить из коллекции все элементы, значение поля position которого эквивалентно заданному");
         System.out.println("filter_by_person (person) : вывести элементы, значение поля person которых равно заданному");
-        System.out.println("filter_contains_name name : вывести элементы, значение поля name которых содержит заданную подстроку");
+        System.out.println("filter_contains_name (name) : вывести элементы, значение поля name которых содержит заданную подстроку");
     }
 }

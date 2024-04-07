@@ -12,6 +12,6 @@ public class Insert implements Command {
 
     @Override
     public void execute(String[] str) {
-
+        collection.insert(Integer.parseInt(str[0]), str[1]);
     }
 }
