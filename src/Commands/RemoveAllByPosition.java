@@ -11,7 +11,7 @@ public class RemoveAllByPosition implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute(String[] str) {
 
     }
 }

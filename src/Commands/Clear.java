@@ -10,7 +10,7 @@ public class Clear implements Command {
     }
 
     @Override
-    public void execute(String string) {
+    public void execute(String[] string) {
         collection.clear();
         System.out.println("Коллекция очищена.");
     }

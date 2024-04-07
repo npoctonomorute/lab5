@@ -11,8 +11,8 @@ public class RemoveKey implements Command {
     }
 
     @Override
-    public void execute(String str) {
-        collection.removeKey(Integer.parseInt(str));
+    public void execute(String[] str) {
+        collection.removeKey(Integer.parseInt(str[0]));
 
     }
 }

@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Commands/Clear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/ExecuteScript.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Exit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Help.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveLower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Save.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Data/Collection.java" afterDir="false" />
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="add commands classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ExecuteScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveLower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Collection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +95,17 @@
       <option name="presentableId" value="Default" />
       <updated>1712412834200</updated>
       <workItem from="1712412834938" duration="1953000" />
-      <workItem from="1712486310210" duration="5311000" />
+      <workItem from="1712486310210" duration="6895000" />
     </task>
+    <task id="LOCAL-00001" summary="add commands classes">
+      <option name="closed" value="true" />
+      <created>1712491979476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712491979476</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,5 +126,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="add commands classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add commands classes" />
   </component>
 </project>

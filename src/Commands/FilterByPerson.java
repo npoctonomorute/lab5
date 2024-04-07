@@ -11,7 +11,7 @@ public class FilterByPerson implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute(String[] str) {
 
     }
 }

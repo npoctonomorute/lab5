@@ -13,4 +13,6 @@ public class Collection {
     public void show(){
         System.out.println(collection);
     }
+    public void update(){
+    }
 }

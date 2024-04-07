@@ -11,7 +11,7 @@ public class FilterContainsName implements Command {
     }
 
     @Override
-    public void execute() {
+    public void execute(String[] str) {
 
     }
 }
