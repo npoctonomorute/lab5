@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Clear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/ExecuteScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/RemoveLower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Save.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Show.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Data/Collection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,7 +59,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2ejL1qLevDpZUHtzx9oROvwpnmv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +71,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/makar/IdeaProjects/lab5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712412834200</updated>
       <workItem from="1712412834938" duration="1953000" />
-      <workItem from="1712486310210" duration="2232000" />
+      <workItem from="1712486310210" duration="5311000" />
     </task>
     <servers />
   </component>
