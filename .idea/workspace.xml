@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="make Info, Insert, RemoveKey, Update methods">
-      <change afterPath="$PROJECT_DIR$/src/Processing/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Processing/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Processing/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Processing/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Processing/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Processing/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +84,7 @@
       <workItem from="1712486310210" duration="13209000" />
       <workItem from="1712758322019" duration="2158000" />
       <workItem from="1712914648006" duration="2590000" />
-      <workItem from="1712928158918" duration="5285000" />
+      <workItem from="1712928158918" duration="5807000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -117,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712496248138</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="make Info, Insert, RemoveKey, Update methods">
+      <option name="closed" value="true" />
+      <created>1712933499910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712933499910</updated>
+    </task>
+    <task id="LOCAL-00005" summary="make Info, Insert, RemoveKey, Update methods">
+      <option name="closed" value="true" />
+      <created>1712933553941</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712933553941</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
