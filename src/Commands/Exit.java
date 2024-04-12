@@ -12,6 +12,6 @@ public class Exit implements Command {
 
     @Override
     public void execute(String[] str) {
-
+        System.exit(0);
     }
 }

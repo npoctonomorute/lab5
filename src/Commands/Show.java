@@ -11,7 +11,7 @@ public class Show implements Command {
     }
 
     @Override
-    public void execute(String string) {
+    public void execute(String[] string) {
         collection.show();
     }
 }
