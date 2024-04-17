@@ -4,14 +4,21 @@ import Data.Collection;
 
 public class Show implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public Show(Collection collection) {
-        this.collection = collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+        collection.show();
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] string) {
-        collection.show();
+    public String description() {
+        return ("вывести в стандартный поток вывода все элементы коллекции в строковом представлении");
     }
 }

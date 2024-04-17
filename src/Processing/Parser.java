@@ -1,2 +1,4 @@
-package Processing;public class Parser {
+package Processing;
+
+public class Parser {
 }

@@ -4,10 +4,13 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class Collection {
-    private final HashMap<Integer, Worker> collection = new HashMap<>();
+    HashMap<Integer, Worker> collection = new HashMap<>();
     private final Date initializationDate = new Date();
     public void clear() {
         collection.clear();
+    }
+    public add(Worker worker){
+        collection.put()
     }
     public void removeKey(int key){
         collection.remove(key);
@@ -34,8 +37,5 @@ public class Collection {
     }
     public int getSize(){
         return collection.size();
-    }
-    public Worker update(){
-        return
     }
 }

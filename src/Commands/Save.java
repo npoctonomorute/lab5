@@ -4,14 +4,22 @@ import Data.Collection;
 
 public class Save implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public Save(Collection collection) {
-        this.collection = collection;
+
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[]str) {
-
+    public String description() {
+        return ("сохранить коллекцию в файл");
     }
 }

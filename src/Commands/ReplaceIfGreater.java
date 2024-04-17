@@ -4,14 +4,21 @@ import Data.Collection;
 
 public class ReplaceIfGreater implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public ReplaceIfGreater(Collection collection) {
-        this.collection = collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-
+    public String description() {
+        return ("заменить значение по ключу, если новое значение больше старого");
     }
 }

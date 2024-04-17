@@ -4,14 +4,21 @@ import Data.Collection;
 
 public class RemoveLower implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public RemoveLower(Collection collection) {
-        this.collection = collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-
+    public String description() {
+        return ("удалить из коллекции все элементы, меньшие, чем заданный");
     }
 }

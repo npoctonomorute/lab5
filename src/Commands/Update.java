@@ -4,14 +4,20 @@ import Data.Collection;
 
 public class Update implements Command {
 
-    private final Collection collection;
+    Collection collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
 
-    public Update(Collection collection) {
-        this.collection = collection;
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] key) {
-        collection.update(Integer.parseInt(key[0]), key[1]);
+    public String description() {
+        return null;
     }
 }

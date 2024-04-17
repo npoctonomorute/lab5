@@ -3,15 +3,21 @@ package Commands;
 import Data.Collection;
 
 public class RemoveAllByPosition implements Command {
+    Collection collection;
 
-    private final Collection collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
 
-    public RemoveAllByPosition(Collection collection) {
-        this.collection = collection;
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-
+    public String description() {
+        return "удалить из коллекции все элементы, значение поля position которого эквивалентно заданному";
     }
 }

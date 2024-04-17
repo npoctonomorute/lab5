@@ -4,14 +4,21 @@ import Data.Collection;
 
 public class FilterContainsName implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public FilterContainsName(Collection collection) {
-        this.collection = collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-
+    public String description() {
+        return ("вывести элементы, значение поля name которых содержит заданную подстроку");
     }
 }

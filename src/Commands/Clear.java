@@ -3,15 +3,21 @@ package Commands;
 import Data.Collection;
 
 public class Clear implements Command {
-    private final Collection collection;
-
-    public Clear(Collection collection) {
-        this.collection = collection;
-    }
-
+    Collection collection;
+    /**
+     *
+     */
     @Override
-    public void execute(String[] string) {
+    public void execute() {
         collection.clear();
         System.out.println("Коллекция очищена.");
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public String description() {
+        return ("очистить коллекцию");
     }
 }

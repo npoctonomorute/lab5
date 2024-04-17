@@ -3,15 +3,19 @@ package Commands;
 import Data.Collection;
 
 public class Exit implements Command {
-
-    private final Collection collection;
-
-    public Exit(Collection collection) {
-        this.collection = collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+        System.exit(0);
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-        System.exit(0);
+    public String description() {
+        return "завершить программу (без сохранения в файл)";
     }
 }

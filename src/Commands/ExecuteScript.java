@@ -11,7 +11,12 @@ public class ExecuteScript implements Command {
     }
 
     @Override
-    public void execute(String[] str) {
+    public void execute() {
 
+    }
+
+    @Override
+    public String description() {
+        return "считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме";
     }
 }

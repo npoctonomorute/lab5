@@ -4,14 +4,21 @@ import Data.Collection;
 
 public class Insert implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public Insert(Collection collection) {
-        this.collection = collection;
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-        collection.insert(Integer.parseInt(str[0]), str[1]);
+    public String description() {
+        return "добавить новый элемент с заданным ключом";
     }
 }

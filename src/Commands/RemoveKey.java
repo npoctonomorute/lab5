@@ -4,14 +4,22 @@ import Data.Collection;
 
 public class RemoveKey implements Command {
 
-    private final Collection collection;
+    Collection collection;
 
-    public RemoveKey(Collection collection) {
-        this.collection = collection;
+
+    /**
+     *
+     */
+    @Override
+    public void execute() {
+        collection.removeKey();
     }
 
+    /**
+     * @return
+     */
     @Override
-    public void execute(String[] str) {
-        collection.removeKey(Integer.parseInt(str[0]));
+    public String description() {
+        return ("удалить элемент из коллекции по его ключу");
     }
 }
