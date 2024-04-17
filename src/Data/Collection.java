@@ -9,8 +9,8 @@ public class Collection {
     public void clear() {
         collection.clear();
     }
-    public add(Worker worker){
-        collection.put()
+    public void add(Worker worker){
+        collection.put(collection.size() + 1, worker);
     }
     public void removeKey(int key){
         collection.remove(key);

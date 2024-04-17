@@ -19,6 +19,6 @@ public class FilterByPerson implements Command {
      */
     @Override
     public String description() {
-        return "вывести элементы, значение поля person которых равно заданному";
+        return "filter_by_person - вывести элементы, значение поля person которых равно заданному";
     }
 }

@@ -15,9 +15,9 @@ public class RemoveGreater implements Command {
     @Override
     public void execute() {
         Worker work = null; // TODO: fix
-        HashMap<Integer, Worker> lol = collection.getMap();
-        for (Integer key : lol.keySet()){
-            int res = work.compareTo(lol.get(key)); //todo: add exceptions
+        HashMap<Integer, Worker> wrkr = collection.getMap();
+        for (Integer key : wrkr.keySet()){
+            int res = work.compareTo(wrkr.get(key)); //todo: add exceptions
         }
     }
 
@@ -26,6 +26,6 @@ public class RemoveGreater implements Command {
      */
     @Override
     public String description() {
-        return ("удалить из коллекции все элементы, превышающие заданный");
+        return ("remove_greater - удалить из коллекции все элементы, превышающие заданный");
     }
 }

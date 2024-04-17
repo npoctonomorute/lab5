@@ -19,6 +19,6 @@ public class Show implements Command {
      */
     @Override
     public String description() {
-        return ("вывести в стандартный поток вывода все элементы коллекции в строковом представлении");
+        return ("show - вывести в стандартный поток вывода все элементы коллекции в строковом представлении");
     }
 }

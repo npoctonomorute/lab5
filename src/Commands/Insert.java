@@ -1,6 +1,7 @@
 package Commands;
 
 import Data.Collection;
+import Data.Worker;
 
 public class Insert implements Command {
 
@@ -11,7 +12,7 @@ public class Insert implements Command {
      */
     @Override
     public void execute() {
-
+        collection.add();
     }
 
     /**
@@ -19,6 +20,6 @@ public class Insert implements Command {
      */
     @Override
     public String description() {
-        return "добавить новый элемент с заданным ключом";
+        return "insert - добавить новый элемент с заданным ключом";
     }
 }

@@ -19,6 +19,6 @@ public class FilterContainsName implements Command {
      */
     @Override
     public String description() {
-        return ("вывести элементы, значение поля name которых содержит заданную подстроку");
+        return ("filter_contains_name - вывести элементы, значение поля name которых содержит заданную подстроку");
     }
 }

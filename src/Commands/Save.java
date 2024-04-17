@@ -20,6 +20,6 @@ public class Save implements Command {
      */
     @Override
     public String description() {
-        return ("сохранить коллекцию в файл");
+        return ("save - сохранить коллекцию в файл");
     }
 }

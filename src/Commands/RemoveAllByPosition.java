@@ -18,6 +18,6 @@ public class RemoveAllByPosition implements Command {
      */
     @Override
     public String description() {
-        return "удалить из коллекции все элементы, значение поля position которого эквивалентно заданному";
+        return "remove_all_by_position - удалить из коллекции все элементы, значение поля position которого эквивалентно заданному";
     }
 }

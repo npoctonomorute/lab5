@@ -2,6 +2,8 @@ package Commands;
 
 import Data.Collection;
 
+import java.util.Scanner;
+
 public class RemoveKey implements Command {
 
     Collection collection;
@@ -12,7 +14,8 @@ public class RemoveKey implements Command {
      */
     @Override
     public void execute() {
-        collection.removeKey();
+        Scanner sc = new Scanner(System.in);
+        collection.removeKey(sc.nextInt());
     }
 
     /**
@@ -20,6 +23,6 @@ public class RemoveKey implements Command {
      */
     @Override
     public String description() {
-        return ("удалить элемент из коллекции по его ключу");
+        return ("remove_key - удалить элемент из коллекции по его ключу");
     }
 }

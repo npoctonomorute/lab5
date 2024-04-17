@@ -19,6 +19,6 @@ public class ReplaceIfGreater implements Command {
      */
     @Override
     public String description() {
-        return ("заменить значение по ключу, если новое значение больше старого");
+        return ("replace_if_greater - заменить значение по ключу, если новое значение больше старого");
     }
 }

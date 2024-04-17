@@ -18,6 +18,6 @@ public class Update implements Command {
      */
     @Override
     public String description() {
-        return null;
+        return ("update - обновить значение элемента коллекции, id которого равен заданному");
     }
 }
