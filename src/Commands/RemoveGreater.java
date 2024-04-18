@@ -1,22 +1,22 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 import Data.Worker;
 
 import java.util.HashMap;
 
 public class RemoveGreater implements Command {
 
-    Collection collection;
+    CollectionManager collection;
 
     /**
      *
      */
     @Override
-    public void execute() {
+    public void execute(String arg) {
         Worker work = null; // TODO: fix
-        HashMap<Integer, Worker> wrkr = collection.getMap();
-        for (Integer key : wrkr.keySet()){
+        HashMap<Long, Worker> wrkr = collection.getMap();
+        for (Long key : wrkr.keySet()){
             int res = work.compareTo(wrkr.get(key)); //todo: add exceptions
         }
     }

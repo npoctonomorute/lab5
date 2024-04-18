@@ -1,15 +1,15 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 
 public class RemoveAllByPosition implements Command {
-    Collection collection;
+    CollectionManager collection;
 
     /**
      *
      */
     @Override
-    public void execute() {
+    public void execute(String arg) {
 
     }
 

@@ -1,14 +1,14 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 
 public class Info implements Command {
-    Collection collection;
+    CollectionManager collection;
     /**
      *
      */
     @Override
-    public void execute() {
+    public void execute(String arg) {
         System.out.println("Тип коллекции: " + collection.getType() + ", дата инициализации: " + collection.getInitializationDate() + ", размер коллекции: " + collection.getSize());
     }
 

@@ -1,18 +1,29 @@
 package Data;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 public class Worker implements Comparable<Worker>{
-    private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-    private String name; //Поле не может быть null, Строка не может быть пустой
-    private Coordinates coordinates; //Поле не может быть null
-    private java.time.LocalDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private double salary; //Значение поля должно быть больше 0
-    private java.util.Date startDate; //Поле не может быть null
-    private Position position; //Поле может быть null
-    private Status status; //Поле не может быть null
-    private Person person; //Поле может быть null
+    private final long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    private final String name; //Поле не может быть null, Строка не может быть пустой
+    private final java.time.LocalDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private final double salary; //Значение поля должно быть больше 0
+    private final java.util.Date startDate; //Поле не может быть null
+    private final Position position; //Поле может быть null
+    private final Status status; //Поле не может быть null
+    private final Person person; //Поле может быть null
+
+    public Worker(long id, String name, java.time.LocalDateTime creationDate, double salary, java.util.Date startDate, Position position, Status status, Person person) {
+        this.id = id;
+        this.name = name;
+        this.creationDate = creationDate;
+        this.salary = salary;
+        this. startDate = startDate;
+        this.position = position;
+        this.status = status;
+        this.person = person;
+    }
 
     public long getId() {
         return id;
@@ -20,10 +31,6 @@ public class Worker implements Comparable<Worker>{
 
     public String getName() {
         return name;
-    }
-
-    public Coordinates getCoordinates() {
-        return coordinates;
     }
 
     public LocalDateTime getCreationDate() {
@@ -50,45 +57,22 @@ public class Worker implements Comparable<Worker>{
         return person;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
-    }
-
-    public void setCreationDate(LocalDateTime creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public void setPosition(Position position) {
-        this.position = position;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-
     @Override
     public int compareTo(Worker o) {
         return Double.compare(o.getSalary(), this.getSalary());
+    }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", creationDate=" + creationDate +
+                ", salary=" + salary +
+                ", startDate=" + startDate +
+                ", position=" + position +
+                ", status=" + status +
+                ", person=" + person +
+                '}';
     }
 }

@@ -1,7 +1,6 @@
 package Commands;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class Invoker {
     HashMap<String, Command> commands = new HashMap<>();
@@ -20,13 +19,24 @@ public class Invoker {
         commands.put("remove_all_by_position", new RemoveAllByPosition());
         commands.put("filter_by_person", new FilterByPerson());
         commands.put("filter_contains_name", new FilterContainsName());
+        commands.put("show", new Show());
+    }
+    public void invoke (String req){
+        String[] parts = req.split(" ", 2);
+        String commandName = parts[0];
+        String arg = null;
+        if (parts.length > 1) {
+            arg = parts[1].trim();
+        }
+        if (commands.containsKey(commandName)){
+            Command com = commands.get(commandName);
+            com.execute(arg);
+        }else{
+            System.out.println("Сори, нет такой команды.");
+        }
     }
 
-    Scanner sc = new Scanner(System.in);
-    while(sc.hasNext()){
-        String line = sc.next();
-        String[] tokens = line.split(" ");
-        Command command = commands.get(tokens[0]);
-        command.execute();
+    public HashMap<String, Command> getCommands() {
+        return commands;
     }
 }

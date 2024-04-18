@@ -1,13 +1,11 @@
 package Commands;
 
-import Data.Collection;
-
 public class Exit implements Command {
     /**
      *
      */
     @Override
-    public void execute() {
+    public void execute(String arg) {
         System.exit(0);
     }
 

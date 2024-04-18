@@ -1,13 +1,15 @@
 package Commands;
 
-import Data.Collection;
+import java.util.HashMap;
 
 public class Help implements Command{
     /**
      *
      */
     @Override
-    public void execute() {
+    public void execute(String arg) {
+        Invoker invoker = new Invoker();
+        HashMap<String, Command> commands = invoker.getCommands();
         for (Command c : commands.values()){
             System.out.println(c.description());
         }

@@ -1,16 +1,16 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 
 public class RemoveLower implements Command {
 
-    Collection collection;
+    CollectionManager collection;
 
     /**
      *
      */
     @Override
-    public void execute() {
+    public void execute(String arg) {
 
     }
 

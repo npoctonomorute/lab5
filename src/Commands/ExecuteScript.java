@@ -1,17 +1,17 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 
 public class ExecuteScript implements Command {
 
-    private final Collection collection;
+    private final CollectionManager collection;
 
-    public ExecuteScript(Collection collection) {
+    public ExecuteScript(CollectionManager collection) {
         this.collection = collection;
     }
 
     @Override
-    public void execute() {
+    public void execute(String arg) {
 
     }
 

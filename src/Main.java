@@ -1,14 +1,14 @@
-import Data.Collection;
+import Commands.Invoker;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Collection cal = new Collection();
-        cal.show();
-        cal.insert(19, "саня");
-        cal.show();
-        cal.clear();
-        cal.show();
+        Scanner sc = new Scanner(System.in);
+        Invoker invoker = new Invoker();
+        while (sc.hasNextLine()){
+            String line = sc.nextLine().trim().toLowerCase(); //обрезает пробелы + нижний регистр
+            invoker.invoke(line);
+        }
     }
 }

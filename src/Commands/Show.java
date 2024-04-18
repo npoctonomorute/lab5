@@ -1,17 +1,14 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 
 public class Show implements Command {
-
-    Collection collection;
-
     /**
      *
      */
     @Override
-    public void execute() {
-        collection.show();
+    public void execute(String arg) {
+        CollectionManager.show();
     }
 
     /**

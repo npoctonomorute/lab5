@@ -1,15 +1,14 @@
 package Commands;
 
-import Data.Collection;
+import Data.CollectionManager;
 
 public class Clear implements Command {
-    Collection collection;
     /**
      *
      */
     @Override
-    public void execute() {
-        collection.clear();
+    public void execute(String arg) {
+        CollectionManager.clear();
         System.out.println("Коллекция очищена.");
     }
 

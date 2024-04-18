@@ -4,13 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="edit all command classes, add Invoker">
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="do RemoveKey, check if it works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Clear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/ExecuteScript.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/ExecuteScript.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Exit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Exit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterContainsName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterContainsName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Help.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Insert.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Insert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveAllByPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveAllByPosition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/ReplaceIfGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/ReplaceIfGreater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Save.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Save.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Show.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Update.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Update.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Collection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Coordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Worker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ExecuteScript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Help.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Invoker.java" afterDir="false" />
@@ -22,7 +47,14 @@
       <change beforePath="$PROJECT_DIR$/src/Commands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Save.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Collection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Processing/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Processing/Validator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,29 +97,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/makar/IdeaProjects/lab5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/makar/IdeaProjects/lab5/src/Main.java",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/makar/Desktop/super-java-lab&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/makar/IdeaProjects/lab5/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Processing" />
       <recent name="Data" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Commands" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="lab5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,6 +153,7 @@
       <workItem from="1712928158918" duration="6900000" />
       <workItem from="1713107566732" duration="734000" />
       <workItem from="1713354358075" duration="8702000" />
+      <workItem from="1713449790089" duration="5664000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
