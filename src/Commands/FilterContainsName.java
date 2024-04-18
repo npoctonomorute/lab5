@@ -3,15 +3,14 @@ package Commands;
 import Data.CollectionManager;
 
 public class FilterContainsName implements Command {
-
-    CollectionManager collection;
-
     /**
      *
      */
     @Override
     public void execute(String arg) {
+        for (int c = 0; c <= CollectionManager.getSize(); c++){
 
+        }
     }
 
     /**

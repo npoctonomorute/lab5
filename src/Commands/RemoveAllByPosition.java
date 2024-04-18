@@ -3,13 +3,12 @@ package Commands;
 import Data.CollectionManager;
 
 public class RemoveAllByPosition implements Command {
-    CollectionManager collection;
-
     /**
      *
      */
     @Override
     public void execute(String arg) {
+
 
     }
 

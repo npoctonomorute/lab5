@@ -1,6 +1,5 @@
 package Data;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -19,7 +18,7 @@ public class CollectionManager {
     public static void add(Worker worker){
         collection.put(worker.getId(), worker);
     }
-    public static void removeKey(int key){
+    public static void removeKey(long key){
         collection.remove(key);
     }
     public static void show(){
@@ -42,6 +41,11 @@ public class CollectionManager {
     public static int getSize(){
         return collection.size();
     }
+
+    public static HashMap<Long, Worker> getCollection(long key){
+        return collection.get(c);
+    }
+
 
 
 }

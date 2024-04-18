@@ -6,16 +6,14 @@ import java.util.Scanner;
 
 public class RemoveKey implements Command {
 
-    CollectionManager collection;
-
 
     /**
-     *
+     * @return удалить элемент из коллекции по его ключу
      */
     @Override
     public void execute(String arg) {
         Scanner sc = new Scanner(System.in);
-        collection.removeKey(sc.nextInt());
+        CollectionManager.removeKey(sc.nextInt());
     }
 
     /**

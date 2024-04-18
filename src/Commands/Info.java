@@ -3,13 +3,12 @@ package Commands;
 import Data.CollectionManager;
 
 public class Info implements Command {
-    CollectionManager collection;
     /**
      *
      */
     @Override
     public void execute(String arg) {
-        System.out.println("Тип коллекции: " + collection.getType() + ", дата инициализации: " + collection.getInitializationDate() + ", размер коллекции: " + collection.getSize());
+        System.out.println("Тип коллекции: " + CollectionManager.getType() + ", дата инициализации: " + CollectionManager.getInitializationDate() + ", размер коллекции: " + CollectionManager.getSize());
     }
 
     /**
