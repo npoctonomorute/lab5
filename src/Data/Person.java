@@ -39,4 +39,12 @@ public class Person {
                 ", location=" + location +
                 '}';
     }
+    public boolean equals (Object other) {
+        Person person = (Person) other;
+        if (person.birthday.equals(this.birthday) && person.hairColor.equals(this.hairColor) && person.nationality.equals(this.nationality) && person.location.equals(this.location)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

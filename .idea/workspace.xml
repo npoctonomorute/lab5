@@ -6,15 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="do Help, Insert, ty Artem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterContainsName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterContainsName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Insert.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Insert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveAllByPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveAllByPosition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/ReplaceIfGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/ReplaceIfGreater.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Update.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Update.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveLower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Data/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +59,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -65,7 +81,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/makar/Desktop/super-java-lab&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/makar/IdeaProjects/lab5&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -114,6 +130,9 @@
       <workItem from="1713107566732" duration="734000" />
       <workItem from="1713354358075" duration="8702000" />
       <workItem from="1713449790089" duration="13093000" />
+      <workItem from="1713532623390" duration="12576000" />
+      <workItem from="1713545441972" duration="448000" />
+      <workItem from="1713545968048" duration="843000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />

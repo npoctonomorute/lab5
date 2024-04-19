@@ -20,25 +20,28 @@ public class Update implements Command {
         String name = sc.nextLine(); //todo: add exceptions if null
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr = sc.nextLine();
-        DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-        Date birthday;
+        DateFormat formatter6 = new SimpleDateFormat("dd.MM.yyyy");
+        Date birthday6;
         try {
-            birthday = formatter.parse(birthdayStr);
+            birthday6 = formatter6.parse(birthdayStr);
         } catch (ParseException e) {
             throw new RuntimeException("Неверный формат ввода даты.");
         }
+        System.out.println("Введите номер цвета волос: ");
+        for (int i = 0; i < Color.values().length; i++) {
+            System.out.println(" • " + i + " - " + Color.values()[i]);
+        }
+        String colorCode = sc.nextLine();
+        Color color = Color.values()[Integer.parseInt(colorCode)];
+
+
         System.out.println("Введите номер национальности: ");
         for (int i = 0; i < Country.values().length; i++) {
             System.out.println(" • " + i + " - " + Country.values()[i]);
         }
         String countryCode = sc.nextLine();
         Country country = Country.values()[Integer.parseInt(countryCode)];
-        System.out.println("Введите номер цвет: ");
-        for (int i = 0; i < Color.values().length; i++) {
-            System.out.println(" • " + i + " - " + Color.values()[i]);
-        }
-        String colorCode = sc.nextLine();
-        Color color = Color.values()[Integer.parseInt(colorCode)];
+
         System.out.println("Введите координаты и имя локации: ");
         System.out.println("Введите координату по x: ");
         Double x = Double.parseDouble(sc.nextLine());
@@ -63,11 +66,11 @@ public class Update implements Command {
         String statusCode = sc.nextLine();
         Status status = Status.values()[Integer.parseInt(statusCode)];
         System.out.println("Введите дату вструпления на должность в формате (ДД.ММ.ГГГГ): ");
-        String startDateStr = sc.nextLine();
-        DateFormat formatter2 = new SimpleDateFormat("dd.MM.yyyy");
-        Date startDate;
+        String startDateStr6 = sc.nextLine();
+        DateFormat formatter26 = new SimpleDateFormat("dd.MM.yyyy");
+        Date startDate6;
         try {
-            startDate = formatter2.parse(startDateStr);
+            startDate6 = formatter26.parse(startDateStr6);
         } catch (ParseException e) {
             throw new RuntimeException("Неверный формат ввода даты.");
         }
@@ -76,10 +79,10 @@ public class Update implements Command {
                 name,
                 LocalDateTime.now(),
                 salary,
-                startDate,
+                startDate6,
                 position,
                 status,
-                new Person(birthday, color, country, new Location(x, y, z, locationName))
+                new Person(birthday6, color, country, new Location(x, y, z, locationName))
         );
         CollectionManager.removeKey(key);
         CollectionManager.add(worker);

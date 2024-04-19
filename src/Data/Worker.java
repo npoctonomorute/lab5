@@ -19,7 +19,7 @@ public class Worker implements Comparable<Worker>{
         this.name = name;
         this.creationDate = creationDate;
         this.salary = salary;
-        this. startDate = startDate;
+        this.startDate = startDate;
         this.position = position;
         this.status = status;
         this.person = person;

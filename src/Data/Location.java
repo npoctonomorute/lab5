@@ -38,4 +38,12 @@ public class Location {
                 ", name='" + name + '\'' +
                 '}';
     }
+    public boolean equals (Object other) {
+        Location loc = (Location) other;
+        if (loc.x.equals(this.x) && loc.y.equals(this.y) && loc.z.equals(this.z) && loc.name.equals(this.name)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

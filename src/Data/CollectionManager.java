@@ -42,9 +42,7 @@ public class CollectionManager {
         return collection.size();
     }
 
-    public static HashMap<Long, Worker> getCollection(long key){
-        return collection.get(c);
-    }
+
 
 
 
