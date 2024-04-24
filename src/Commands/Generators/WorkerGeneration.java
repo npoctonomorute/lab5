@@ -1,5 +1,7 @@
 package Commands.Generators;
 
+import Commands.Exceptions.ConsoleInputValidator;
+import Commands.Exceptions.EmptyStringException;
 import Data.*;
 
 import java.text.DateFormat;
@@ -11,9 +13,17 @@ import java.util.Scanner;
 
 public class WorkerGeneration{
     public Worker execute() {
+
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Введите имя: ");
-        String name = sc.nextLine(); //todo: add exceptions if null
+        String name = null;
+        try {
+            name = ConsoleInputValidator.getNonEmptyInput();
+        } catch (EmptyStringException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите имя: ");
+        }
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr1 = sc.nextLine();
