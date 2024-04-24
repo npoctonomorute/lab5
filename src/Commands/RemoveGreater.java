@@ -1,13 +1,8 @@
 package Commands;
 
+import Commands.Generators.WorkerGeneration;
 import Data.*;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -19,7 +14,7 @@ public class RemoveGreater implements Command {
     @Override
     public void execute(String arg) {
         WorkerGeneration workerGeneration = new WorkerGeneration();
-        Worker worker = workerGeneration.execute(arg);
+        Worker worker = workerGeneration.execute();
         /*System.out.println("Начинается генерации работяги для сравнения!!!");
         System.out.println("Введите имя: ");
         String name = sc.nextLine(); //todo: add exceptions if null

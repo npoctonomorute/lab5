@@ -1,12 +1,8 @@
 package Commands;
 
+import Commands.Generators.WorkerGeneration;
 import Data.*;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -19,9 +15,9 @@ public class RemoveLower implements Command {
     public void execute(String arg) {
         System.out.println("Начинается генерации работяги для сравнения!!!");
         WorkerGeneration workerGeneration = new WorkerGeneration();
-        Worker worker = workerGeneration.execute(arg);
+        Worker worker = workerGeneration.execute();
         /*System.out.println("Введите имя: ");
-        String name = sc.nextLine(); //todo: add exceptions if null
+        String name = sc.nextLine();
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr = sc.nextLine();
         DateFormat formatter4 = new SimpleDateFormat("dd.MM.yyyy");

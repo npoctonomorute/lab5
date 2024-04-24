@@ -1,4 +1,4 @@
-package Commands;
+package Commands.Generators;
 
 import Data.Color;
 import Data.Country;

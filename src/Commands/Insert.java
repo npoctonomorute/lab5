@@ -1,12 +1,8 @@
 package Commands;
 
+import Commands.Generators.WorkerGeneration;
 import Data.*;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Insert implements Command {
@@ -18,7 +14,7 @@ public class Insert implements Command {
     public void execute(String arg) {
         System.out.println("Начинается создание работяги!!!");
 
-        System.out.println("Введите имя: ");
+        /*System.out.println("Введите имя: ");
         String name = sc.nextLine(); //todo: add exceptions if null
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
@@ -89,6 +85,10 @@ public class Insert implements Command {
                 status,
                 new Person(birthday1, color, country, new Location(x, y, z, locationName))
         );
+
+         */
+        WorkerGeneration workerGeneration = new WorkerGeneration();
+        Worker worker = workerGeneration.execute();
         CollectionManager.add(worker);
         System.out.println("Работяга создан и добавлен!");
     }

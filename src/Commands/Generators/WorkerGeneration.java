@@ -1,4 +1,4 @@
-package Commands;
+package Commands.Generators;
 
 import Data.*;
 
@@ -10,11 +10,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class WorkerGeneration{
-    /**
-     * @param arg
-     * @return
-     */
-    public Worker execute(String arg) {
+    public Worker execute() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите имя: ");
         String name = sc.nextLine(); //todo: add exceptions if null

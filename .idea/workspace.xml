@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="do all Command classes, except of Save and ExecuteScript">
-      <change afterPath="$PROJECT_DIR$/src/Commands/PersonGeneration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/WorkerGeneration.java" afterDir="false" />
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="add PersonGeneration, WorkerGeneration to maker exceptions for them">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/PersonGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Generators/PersonGeneration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveLower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/WorkerGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Generators/WorkerGeneration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +121,7 @@
       <workItem from="1713545441972" duration="448000" />
       <workItem from="1713545968048" duration="1047000" />
       <workItem from="1713881358485" duration="1210000" />
-      <workItem from="1713961313801" duration="3616000" />
+      <workItem from="1713961313801" duration="4441000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -199,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713546868644</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add PersonGeneration, WorkerGeneration to maker exceptions for them">
+      <option name="closed" value="true" />
+      <created>1713970551007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713970551007</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +239,7 @@
     <MESSAGE value="edit all command classes, add Invoker" />
     <MESSAGE value="do Help, Insert, ty Artem" />
     <MESSAGE value="do all Command classes, except of Save and ExecuteScript" />
-    <option name="LAST_COMMIT_MESSAGE" value="do all Command classes, except of Save and ExecuteScript" />
+    <MESSAGE value="add PersonGeneration, WorkerGeneration to maker exceptions for them" />
+    <option name="LAST_COMMIT_MESSAGE" value="add PersonGeneration, WorkerGeneration to maker exceptions for them" />
   </component>
 </project>
