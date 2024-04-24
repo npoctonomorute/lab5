@@ -18,7 +18,9 @@ public class RemoveLower implements Command {
     @Override
     public void execute(String arg) {
         System.out.println("Начинается генерации работяги для сравнения!!!");
-        System.out.println("Введите имя: ");
+        WorkerGeneration workerGeneration = new WorkerGeneration();
+        Worker worker = workerGeneration.execute(arg);
+        /*System.out.println("Введите имя: ");
         String name = sc.nextLine(); //todo: add exceptions if null
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr = sc.nextLine();
@@ -87,8 +89,8 @@ public class RemoveLower implements Command {
                 status,
                 new Person(birthday4, color, country, new Location(x, y, z, locationName))
         );
+         */
         HashMap<Long, Worker> coll = CollectionManager.getMap();
-        //ArrayList<Worker> workers = new ArrayList<>();
         for (Worker newWorker : coll.values()){
             if (worker.compareTo(newWorker) > 0){
                 CollectionManager.removeKey(newWorker.getId());

@@ -4,30 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="do Help, Insert, ty Artem">
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="do all Command classes, except of Save and ExecuteScript">
+      <change afterPath="$PROJECT_DIR$/src/Commands/PersonGeneration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/WorkerGeneration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterByPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/FilterContainsName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/FilterContainsName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Insert.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Insert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveAllByPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveAllByPosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveGreater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveLower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/ReplaceIfGreater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/ReplaceIfGreater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Update.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Update.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterByPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterContainsName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Insert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveAllByPosition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveGreater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveLower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ReplaceIfGreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/CollectionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +115,9 @@
       <workItem from="1713449790089" duration="13093000" />
       <workItem from="1713532623390" duration="12576000" />
       <workItem from="1713545441972" duration="448000" />
-      <workItem from="1713545968048" duration="843000" />
+      <workItem from="1713545968048" duration="1047000" />
+      <workItem from="1713881358485" duration="1210000" />
+      <workItem from="1713961313801" duration="3616000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -206,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713456490342</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="do all Command classes, except of Save and ExecuteScript">
+      <option name="closed" value="true" />
+      <created>1713546868644</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713546868644</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +226,7 @@
     <MESSAGE value="add parser and validator, idk what to do" />
     <MESSAGE value="edit all command classes, add Invoker" />
     <MESSAGE value="do Help, Insert, ty Artem" />
-    <option name="LAST_COMMIT_MESSAGE" value="do Help, Insert, ty Artem" />
+    <MESSAGE value="do all Command classes, except of Save and ExecuteScript" />
+    <option name="LAST_COMMIT_MESSAGE" value="do all Command classes, except of Save and ExecuteScript" />
   </component>
 </project>

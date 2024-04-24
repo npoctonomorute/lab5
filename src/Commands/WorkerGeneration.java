@@ -6,30 +6,25 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class RemoveGreater implements Command {
-    Scanner sc = new Scanner(System.in);
+public class WorkerGeneration{
     /**
-     *
+     * @param arg
+     * @return
      */
-    @Override
-    public void execute(String arg) {
-        WorkerGeneration workerGeneration = new WorkerGeneration();
-        Worker worker = workerGeneration.execute(arg);
-        /*System.out.println("Начинается генерации работяги для сравнения!!!");
+    public Worker execute(String arg) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Введите имя: ");
         String name = sc.nextLine(); //todo: add exceptions if null
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
-        String birthdayStr3 = sc.nextLine();
-        DateFormat formatter3 = new SimpleDateFormat("dd.MM.yyyy");
-        Date birthday3;
+        String birthdayStr1 = sc.nextLine();
+        DateFormat formatter1 = new SimpleDateFormat("dd.MM.yyyy");
+        Date birthday1;
         try {
-            birthday3 = formatter3.parse(birthdayStr3);
+            birthday1 = formatter1.parse(birthdayStr1);
         } catch (ParseException e) {
             throw new RuntimeException("Неверный формат ввода даты.");
         }
@@ -74,11 +69,11 @@ public class RemoveGreater implements Command {
         Status status = Status.values()[Integer.parseInt(statusCode)];
 
         System.out.println("Введите дату вструпления на должность в формате (ДД.ММ.ГГГГ): ");
-        String startDateStr = sc.nextLine();
-        DateFormat formatter23 = new SimpleDateFormat("dd.MM.yyyy");
-        Date startDate3;
+        String startDateStr1 = sc.nextLine();
+        DateFormat formatter12 = new SimpleDateFormat("dd.MM.yyyy");
+        Date startDate1;
         try {
-            startDate3 = formatter23.parse(startDateStr);
+            startDate1 = formatter12.parse(startDateStr1);
         } catch (ParseException e) {
             throw new RuntimeException("Неверный формат ввода даты.");
         }
@@ -87,29 +82,11 @@ public class RemoveGreater implements Command {
                 name,
                 LocalDateTime.now(),
                 salary,
-                startDate3,
+                startDate1,
                 position,
                 status,
-                new Person(birthday3, color, country, new Location(x, y, z, locationName))
+                new Person(birthday1, color, country, new Location(x, y, z, locationName))
         );
-         */
-        HashMap<Long, Worker> coll = CollectionManager.getMap();
-        //ArrayList<Worker> workers = new ArrayList<>();
-        for (Worker newWorker : coll.values()){
-            if (worker.compareTo(newWorker) < 0){
-                CollectionManager.removeKey(newWorker.getId());
-                System.out.println("Работяга с ID = " + newWorker.getId() + " устранен, у него слишком большая зарплата!");
-            }else{
-                System.out.println("Работяга с ID = " + newWorker.getId() + " оставлен, его зарплата достаточно мала!");
-            }
-        }
-    }
-
-    /**
-     * @return
-     */
-    @Override
-    public String description() {
-        return ("remove_greater - удалить из коллекции все элементы, превышающие заданный");
+        return worker;
     }
 }

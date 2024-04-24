@@ -22,7 +22,10 @@ public class FilterByPerson implements Command {
 
         System.out.println("Начинается поиск...");
 
-        String[] parts = arg.split(" ", 7);
+        PersonGeneration personGeneration = new PersonGeneration();
+        Person person = personGeneration.execute(arg);
+
+        /*String[] parts = arg.split(" ", 7);
 
         String birthdayStr = parts[0];
         DateFormat formatter2 = new SimpleDateFormat("dd.MM.yyyy");
@@ -48,6 +51,8 @@ public class FilterByPerson implements Command {
                 color,
                 country,
                 new Location(x, y, z, locName));
+
+         */
 
         HashMap<Long, Worker> coll = CollectionManager.getMap();
         boolean flag = false;
