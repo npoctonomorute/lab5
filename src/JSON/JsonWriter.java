@@ -1,31 +1,25 @@
 package JSON;
 
-import App.Converter;
-import Data.Worker;
+import App.CollectionManager;
+import com.google.gson.Gson;
 
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.Collection;
 
 public class JsonWriter {
-    public void write(Collection<Worker> workers){
+    private final CollectionManager collection;
+    private final String fileName;
 
-        String filepath = "./data.json";
-        StringBuilder data = new StringBuilder();
+    public JsonWriter(CollectionManager collection, String fileName) {
+        this.collection = collection;
+        this.fileName = fileName;
+    }
 
-        data.append("[\n");
-        for (Worker worker : workers){
-            String json = Converter.mapToJson(Converter.workerToMap(worker));
-            data.append(Converter.tabJson(json));
-        }
-        data.deleteCharAt(data.length() - 1);
-        data.append("\n]");
-
-        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(filepath))){
-            writer.write(data.toString());
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+    public void write() throws IOException {
+        Gson gson = new Gson();
+        String json = gson.toJson(CollectionManager.getAll());
+        FileWriter fileWriter = new FileWriter("amogus.json");
+        fileWriter.write(json);
+        fileWriter.close();
     }
 }

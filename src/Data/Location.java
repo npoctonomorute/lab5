@@ -6,6 +6,9 @@ public class Location {
     private Double z; //Поле не может быть null
     private String name; //Поле не может быть null
 
+    public Location(Double x, Double y, Double z, String locationName) {
+    }
+
     public Double getX() {
         return x;
     }

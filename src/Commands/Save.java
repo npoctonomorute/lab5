@@ -9,15 +9,15 @@ public class Save implements Command {
 
     public Save() {
     }
-
+    CollectionManager collection;
     /**
      *
      */
     @Override
     public void execute(String arg) {
-        JsonWriter writer = new JsonWriter();
+        JsonWriter writer = new JsonWriter(collection, "amogus.json");
         try {
-            writer.writeToJson();
+            writer.write();
             System.out.println("Коллекция сохранена в amogus.json");
         } catch (IOException e) {
             System.out.println("Ошибка при сохранении в amogus.json: " + e.getMessage());

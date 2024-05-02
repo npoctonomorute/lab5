@@ -9,7 +9,6 @@ import Data.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -88,7 +87,7 @@ public class WorkerGeneration{
         Worker worker = new Worker(
                 CollectionManager.generateId(),
                 name,
-                LocalDateTime.now(),
+                new Date(),
                 salary,
                 startDate1,
                 position,

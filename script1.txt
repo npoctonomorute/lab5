@@ -12,4 +12,3 @@ itmo
 0
 04.09.2023
 show
-remove_key 1

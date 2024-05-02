@@ -8,6 +8,9 @@ public class Person {
     private Country nationality; //Поле не может быть null
     private Location location; //Поле не может быть null
 
+    public Person(Date birthday2, Color color, Country country, Location location) {
+    }
+
 
     public Date getBirthday() {
         return birthday;

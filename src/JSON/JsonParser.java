@@ -1,47 +1,33 @@
 package JSON;
 
+import App.CollectionManager;
 import Data.Worker;
-import Data.WorkerParsedData;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import App.Converter;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
-import java.time.LocalDate;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.io.StringReader;
+import java.util.Date;
+import java.util.List;
 
 public class JsonParser {
-    public Collection<Worker> parse() {
-        String filepath = "./data.json";
-        Collection<WorkerParsedData> collection;
-        Collection<Worker> workers = new HashSet<>();
+    private final String fileName;
+    private final String test = "";
+    public JsonParser(String fileName) {
+        this.fileName = fileName;
+    }
+    public CollectionManager parse() throws FileNotFoundException {
+        Gson gson = new Gson();
+        //BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        BufferedReader reader = new BufferedReader(new StringReader(test));
+        List<Worker> workers = gson.fromJson(reader, new TypeToken<List<Worker>>(){}.getType());
+        CollectionManager collection = new CollectionManager();
 
-        try {
-            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(filepath));
-
-            Gson gson = new GsonBuilder()
-                    .registerTypeAdapter(LocalDate.class, new LocalDateTypeAdapter())
-                    .create();
-            collection = gson.fromJson(
-                    new InputStreamReader(bis),
-                    new TypeToken<Collection<WorkerParsedData>>() {
-                    }.getType()
-            );
-
-            for (WorkerParsedData workerParsedData : collection){
-                workers.add(Converter.parsedToWorker(workerParsedData));
-            }
-
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException();
+        for (Worker worker : workers) {
+            worker.setId(CollectionManager.generateId());
+            worker.setCreationDate(new Date());
         }
-
-        return flats;
+        return collection;
     }
 }
