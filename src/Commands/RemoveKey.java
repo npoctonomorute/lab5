@@ -1,6 +1,7 @@
 package Commands;
 
-import Data.CollectionManager;
+import App.AppContainer;
+import App.CollectionManager;
 
 import java.util.Scanner;
 
@@ -12,8 +13,8 @@ public class RemoveKey implements Command {
      */
     @Override
     public void execute(String arg) {
-        Scanner sc = new Scanner(System.in);
-        CollectionManager.removeKey(sc.nextInt());
+        Scanner sc = AppContainer.getSc();
+        CollectionManager.removeKey(Long.parseLong(arg));
     }
 
     /**

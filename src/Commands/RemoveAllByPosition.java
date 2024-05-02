@@ -1,12 +1,8 @@
 package Commands;
 
+import App.CollectionManager;
 import Data.*;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 public class RemoveAllByPosition implements Command {

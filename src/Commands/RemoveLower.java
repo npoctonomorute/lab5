@@ -1,5 +1,7 @@
 package Commands;
 
+import App.AppContainer;
+import App.CollectionManager;
 import Commands.Generators.WorkerGeneration;
 import Data.*;
 
@@ -10,7 +12,7 @@ public class RemoveLower implements Command {
     /**
      *
      */
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = AppContainer.getSc();
     @Override
     public void execute(String arg) {
         System.out.println("Начинается генерации работяги для сравнения!!!");

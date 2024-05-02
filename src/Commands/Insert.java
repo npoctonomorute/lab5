@@ -1,5 +1,7 @@
 package Commands;
 
+import App.AppContainer;
+import App.CollectionManager;
 import Commands.Generators.WorkerGeneration;
 import Data.*;
 
@@ -9,13 +11,13 @@ public class Insert implements Command {
     /**
      *
      */
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = AppContainer.getSc();
     @Override
     public void execute(String arg) {
         System.out.println("Начинается создание работяги!!!");
 
         /*System.out.println("Введите имя: ");
-        String name = sc.nextLine(); //todo: add exceptions if null
+        String name = sc.nextLine();
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr1 = sc.nextLine();

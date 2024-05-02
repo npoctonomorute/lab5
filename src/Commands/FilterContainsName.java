@@ -1,6 +1,6 @@
 package Commands;
 
-import Data.CollectionManager;
+import App.CollectionManager;
 import Data.Worker;
 
 import java.util.ArrayList;

@@ -1,10 +1,12 @@
 package Commands.Exceptions;
 
+import App.AppContainer;
+
 import java.util.Scanner;
 
 public class ConsoleInputValidator {
     public static String getNonEmptyInput() throws EmptyStringException {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = AppContainer.getSc();
         String inputString = null;
         do {
             inputString = scanner.nextLine();

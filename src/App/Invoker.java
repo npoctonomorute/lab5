@@ -1,4 +1,6 @@
-package Commands;
+package App;
+
+import Commands.*;
 
 import java.util.HashMap;
 
@@ -20,6 +22,7 @@ public class Invoker {
         commands.put("filter_by_person", new FilterByPerson());
         commands.put("filter_contains_name", new FilterContainsName());
         commands.put("show", new Show());
+        commands.put("execute_script", new ExecuteScript());
     }
     public void invoke (String req){
         String[] parts = req.split(" ", 2);

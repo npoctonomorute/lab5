@@ -1,0 +1,15 @@
+insert
+makar
+06.01.2005
+0
+0
+1
+1
+1
+itmo
+0
+0
+0
+04.09.2023
+show
+remove_key 1

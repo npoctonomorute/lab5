@@ -1,6 +1,6 @@
 package Commands;
 
-import Data.CollectionManager;
+import App.CollectionManager;
 
 public class Save implements Command {
 

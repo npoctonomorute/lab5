@@ -1,4 +1,6 @@
-package Data;
+package App;
+
+import Data.Worker;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -41,9 +43,4 @@ public class CollectionManager {
     public static int getSize(){
         return collection.size();
     }
-
-
-
-
-
 }

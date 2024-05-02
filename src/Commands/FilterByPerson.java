@@ -1,5 +1,6 @@
 package Commands;
 
+import App.CollectionManager;
 import Commands.Generators.PersonGeneration;
 import Data.*;
 

@@ -1,5 +1,7 @@
 package Commands.Generators;
 
+import App.AppContainer;
+import App.CollectionManager;
 import Commands.Exceptions.ConsoleInputValidator;
 import Commands.Exceptions.EmptyStringException;
 import Data.*;
@@ -14,7 +16,7 @@ import java.util.Scanner;
 public class WorkerGeneration{
     public Worker execute() {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = AppContainer.getSc();
 
         System.out.println("Введите имя: ");
         String name = null;

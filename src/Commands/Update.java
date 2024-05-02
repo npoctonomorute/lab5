@@ -1,23 +1,24 @@
 package Commands;
 
+import App.AppContainer;
+import App.CollectionManager;
+import Commands.Generators.WorkerGeneration;
 import Data.*;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Update implements Command {
 
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = AppContainer.getSc();
     @Override
     public void execute(String arg) {
         System.out.println("Начинается замена работяги по ключу!!!");
         long key = Long.parseLong(arg);
+        WorkerGeneration workerGeneration = new WorkerGeneration();
+        Worker worker = workerGeneration.execute();
+        /*
         System.out.println("Введите имя: ");
-        String name = sc.nextLine(); //todo: add exceptions if null
+        String name = sc.nextLine();
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr = sc.nextLine();
         DateFormat formatter6 = new SimpleDateFormat("dd.MM.yyyy");
@@ -84,6 +85,8 @@ public class Update implements Command {
                 status,
                 new Person(birthday6, color, country, new Location(x, y, z, locationName))
         );
+
+         */
         CollectionManager.removeKey(key);
         CollectionManager.add(worker);
         System.out.println("Работяга создан и заменил предыдущего работягу! (без негатива)");

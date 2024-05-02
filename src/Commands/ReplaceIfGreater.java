@@ -1,13 +1,10 @@
 package Commands;
 
+import App.AppContainer;
+import App.CollectionManager;
+import Commands.Generators.WorkerGeneration;
 import Data.*;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class ReplaceIfGreater implements Command {
@@ -16,12 +13,14 @@ public class ReplaceIfGreater implements Command {
     /**
      *
      */
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = AppContainer.getSc();
     @Override
     public void execute(String arg) {
         System.out.println("Начинается замена работяги по ключу (но только если у него больше зарплата)!!!");
         long key1 = Long.parseLong(arg);
-        System.out.println("Введите имя: ");
+        WorkerGeneration workerGeneration = new WorkerGeneration();
+        Worker worker = workerGeneration.execute();
+        /*System.out.println("Введите имя: ");
         String name = sc.nextLine(); //todo: add exceptions if null
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr = sc.nextLine();
@@ -89,6 +88,8 @@ public class ReplaceIfGreater implements Command {
                 status,
                 new Person(birthday5, color, country, new Location(x, y, z, locationName))
         );
+
+         */
         Worker oldWorker = CollectionManager.getMap().get(key1);
         if (worker.compareTo(oldWorker) < 0){
             CollectionManager.removeKey(key1);

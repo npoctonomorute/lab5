@@ -1,5 +1,7 @@
 package Commands;
 
+import App.AppContainer;
+import App.CollectionManager;
 import Commands.Generators.WorkerGeneration;
 import Data.*;
 
@@ -7,7 +9,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class RemoveGreater implements Command {
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = AppContainer.getSc();
     /**
      *
      */
@@ -17,7 +19,7 @@ public class RemoveGreater implements Command {
         Worker worker = workerGeneration.execute();
         /*System.out.println("Начинается генерации работяги для сравнения!!!");
         System.out.println("Введите имя: ");
-        String name = sc.nextLine(); //todo: add exceptions if null
+        String name = sc.nextLine();
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr3 = sc.nextLine();
@@ -89,7 +91,6 @@ public class RemoveGreater implements Command {
         );
          */
         HashMap<Long, Worker> coll = CollectionManager.getMap();
-        //ArrayList<Worker> workers = new ArrayList<>();
         for (Worker newWorker : coll.values()){
             if (worker.compareTo(newWorker) < 0){
                 CollectionManager.removeKey(newWorker.getId());
