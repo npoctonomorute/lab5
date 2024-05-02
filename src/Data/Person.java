@@ -3,17 +3,11 @@ package Data;
 import java.util.Date;
 
 public class Person {
-    private final java.util.Date birthday; //Поле не может быть null
-    private final Color hairColor; //Поле может быть null
-    private final Country nationality; //Поле не может быть null
-    private final Location location; //Поле не может быть null
+    private java.util.Date birthday; //Поле не может быть null
+    private Color hairColor; //Поле может быть null
+    private Country nationality; //Поле не может быть null
+    private Location location; //Поле не может быть null
 
-    public Person(Date birthday, Color hairColor, Country nationality, Location location) {
-        this.birthday = birthday;
-        this.hairColor = hairColor;
-        this.nationality = nationality;
-        this.location = location;
-    }
 
     public Date getBirthday() {
         return birthday;
@@ -28,6 +22,22 @@ public class Person {
     }
     public Location getLocation() {
         return location;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public void setHairColor(Color hairColor) {
+        this.hairColor = hairColor;
+    }
+
+    public void setNationality(Country nationality) {
+        this.nationality = nationality;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     @Override

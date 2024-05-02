@@ -2,6 +2,7 @@ package App;
 
 import Data.Worker;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -9,6 +10,9 @@ public class CollectionManager {
     private static final HashMap<Long, Worker> collection = new HashMap<Long, Worker>();
 
     private static long lastId = 0;
+    public static Collection<Worker> getAll(){
+        return collection.values();
+    }
 
     public  static long generateId(){
         return ++lastId;
