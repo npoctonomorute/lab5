@@ -9,6 +9,10 @@ public class Person {
     private Location location; //Поле не может быть null
 
     public Person(Date birthday2, Color color, Country country, Location location) {
+        this.birthday = birthday2;
+        this.nationality = country;
+        this.hairColor = color;
+        this.location = location;
     }
 
 

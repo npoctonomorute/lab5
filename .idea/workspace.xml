@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="make ExecuteScript, AppContainer">
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="experiment with json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Save.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Save.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amogus.json" beforeDir="false" afterPath="$PROJECT_DIR$/amogus.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JSON/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSON/JsonParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +137,7 @@
       <workItem from="1714214722853" duration="5488000" />
       <workItem from="1714567779163" duration="7653000" />
       <workItem from="1714634865461" duration="24371000" />
-      <workItem from="1714668365886" duration="5897000" />
+      <workItem from="1714668365886" duration="7282000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -252,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714678715563</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="experiment with json">
+      <option name="closed" value="true" />
+      <created>1714682968172</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714682968173</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +290,7 @@
     <MESSAGE value="add PersonGeneration, WorkerGeneration to maker exceptions for them" />
     <MESSAGE value="add PersonGeneration, WorkerGeneration (final)" />
     <MESSAGE value="make ExecuteScript, AppContainer" />
-    <option name="LAST_COMMIT_MESSAGE" value="make ExecuteScript, AppContainer" />
+    <MESSAGE value="experiment with json" />
+    <option name="LAST_COMMIT_MESSAGE" value="experiment with json" />
   </component>
 </project>

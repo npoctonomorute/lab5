@@ -7,6 +7,10 @@ public class Location {
     private String name; //Поле не может быть null
 
     public Location(Double x, Double y, Double z, String locationName) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.name = locationName;
     }
 
     public Double getX() {
