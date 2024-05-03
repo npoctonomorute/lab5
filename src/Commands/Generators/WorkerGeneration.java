@@ -3,6 +3,7 @@ package Commands.Generators;
 import App.AppContainer;
 import App.CollectionManager;
 import Commands.Exceptions.ConsoleInputValidator;
+import Commands.Exceptions.DoubleInputException;
 import Commands.Exceptions.EmptyStringException;
 import Data.*;
 
@@ -12,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class WorkerGeneration{
+public class WorkerGeneration {
     public Worker execute() {
 
         Scanner sc = AppContainer.getSc();
@@ -27,7 +28,7 @@ public class WorkerGeneration{
         }
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
-        String birthdayStr1 = sc.nextLine();
+        String birthdayStr1 = sc.nextLine().trim().toLowerCase();
         DateFormat formatter1 = new SimpleDateFormat("dd.MM.yyyy");
         Date birthday1;
         try {
@@ -40,7 +41,7 @@ public class WorkerGeneration{
         for (int i = 0; i < Color.values().length; i++) {
             System.out.println(" • " + i + " - " + Color.values()[i]);
         }
-        String colorCode = sc.nextLine();
+        String colorCode = sc.nextLine().trim().toLowerCase();
         Color color = Color.values()[Integer.parseInt(colorCode)];
 
 
@@ -48,35 +49,69 @@ public class WorkerGeneration{
         for (int i = 0; i < Country.values().length; i++) {
             System.out.println(" • " + i + " - " + Country.values()[i]);
         }
-        String countryCode = sc.nextLine();
+        String countryCode = sc.nextLine().trim().toLowerCase();
         Country country = Country.values()[Integer.parseInt(countryCode)];
 
         System.out.println("Введите координаты и имя локации: ");
+        Double x = (double) 0;
+        Double y = (double) 0;
+        Double z = (double) 0;
+        String locationName = null;
         System.out.println("Введите координату по x: ");
-        Double x = Double.parseDouble(sc.nextLine());
+        try {
+            x = Double.parseDouble(ConsoleInputValidator.getDoubleInput());
+        } catch (DoubleInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите координату по x:");
+        }
+
         System.out.println("Введите координату по y: ");
-        Double y = Double.parseDouble(sc.nextLine());
+        try {
+            y = Double.parseDouble(ConsoleInputValidator.getDoubleInput());
+        } catch (DoubleInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите координату по y:");
+        }
+
         System.out.println("Введите координату по z: ");
-        Double z = Double.parseDouble(sc.nextLine());
+        try {
+            z = Double.parseDouble(ConsoleInputValidator.getDoubleInput());
+        } catch (DoubleInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите координату по z:");
+        }
+
         System.out.println("Введите название локации: ");
-        String locationName = sc.nextLine();
+        try {
+            locationName = ConsoleInputValidator.getNonEmptyInput();
+        } catch (EmptyStringException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите название локации: ");
+        }
         System.out.println("Введите размер зарплаты: ");
-        double salary = Double.parseDouble(sc.nextLine());
+        double salary = 0;
+        try {
+            salary = Double.parseDouble(ConsoleInputValidator.getDoubleInput());
+        } catch (DoubleInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите размер зарплаты: ");
+        }
+
         System.out.println("Введите номер профессии: ");
         for (int i = 0; i < Position.values().length; i++) {
             System.out.println(" • " + i + " - " + Position.values()[i]);
         }
-        String positionCode = sc.nextLine();
+        String positionCode = sc.nextLine().trim().toLowerCase();
         Position position = Position.values()[Integer.parseInt(positionCode)];
         System.out.println("Введите номер статуса: ");
         for (int i = 0; i < Status.values().length; i++) {
             System.out.println(" • " + i + " - " + Status.values()[i]);
         }
-        String statusCode = sc.nextLine();
+        String statusCode = sc.nextLine().trim().toLowerCase();
         Status status = Status.values()[Integer.parseInt(statusCode)];
 
         System.out.println("Введите дату вструпления на должность в формате (ДД.ММ.ГГГГ): ");
-        String startDateStr1 = sc.nextLine();
+        String startDateStr1 = sc.nextLine().trim().toLowerCase();
         DateFormat formatter12 = new SimpleDateFormat("dd.MM.yyyy");
         Date startDate1;
         try {

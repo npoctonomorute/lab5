@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="experiment with json">
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="complete, todo: exceptions">
+      <change afterPath="$PROJECT_DIR$/src/Commands/Exceptions/DoubleInputException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Exceptions/IntInputException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amogus.json" beforeDir="false" afterPath="$PROJECT_DIR$/amogus.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Exceptions/ConsoleInputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Exceptions/ConsoleInputValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Generators/WorkerGeneration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Generators/WorkerGeneration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Converter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Exceptions/ConsoleInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exceptions/ConsoleInputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Exceptions/EmptyStringException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exceptions/EmptyStringException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Generators/WorkerGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Generators/WorkerGeneration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/WorkerData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/WorkerParsedData.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,7 +145,9 @@
       <workItem from="1714214722853" duration="5488000" />
       <workItem from="1714567779163" duration="7653000" />
       <workItem from="1714634865461" duration="24371000" />
-      <workItem from="1714668365886" duration="7282000" />
+      <workItem from="1714668365886" duration="7777000" />
+      <workItem from="1714714803092" duration="4475000" />
+      <workItem from="1714729570294" duration="4345000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -259,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714682968173</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="complete, todo: exceptions">
+      <option name="closed" value="true" />
+      <created>1714684388930</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714684388931</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +309,7 @@
     <MESSAGE value="add PersonGeneration, WorkerGeneration (final)" />
     <MESSAGE value="make ExecuteScript, AppContainer" />
     <MESSAGE value="experiment with json" />
-    <option name="LAST_COMMIT_MESSAGE" value="experiment with json" />
+    <MESSAGE value="complete, todo: exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete, todo: exceptions" />
   </component>
 </project>
