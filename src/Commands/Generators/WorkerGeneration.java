@@ -5,6 +5,7 @@ import App.CollectionManager;
 import Commands.Exceptions.ConsoleInputValidator;
 import Commands.Exceptions.DoubleInputException;
 import Commands.Exceptions.EmptyStringException;
+import Commands.Exceptions.IntInputException;
 import Data.*;
 
 import java.text.DateFormat;
@@ -37,11 +38,18 @@ public class WorkerGeneration {
             throw new RuntimeException("Неверный формат ввода даты.");
         }
 
+
         System.out.println("Введите номер цвета волос: ");
         for (int i = 0; i < Color.values().length; i++) {
             System.out.println(" • " + i + " - " + Color.values()[i]);
         }
-        String colorCode = sc.nextLine().trim().toLowerCase();
+        String colorCode = null;
+        try {
+            colorCode = ConsoleInputValidator.getEnumException(Color.values().length);
+        } catch (IntInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите номер цвета волос: ");
+        }
         Color color = Color.values()[Integer.parseInt(colorCode)];
 
 
@@ -49,8 +57,15 @@ public class WorkerGeneration {
         for (int i = 0; i < Country.values().length; i++) {
             System.out.println(" • " + i + " - " + Country.values()[i]);
         }
-        String countryCode = sc.nextLine().trim().toLowerCase();
+        String countryCode = null;
+        try {
+            countryCode = ConsoleInputValidator.getEnumException(Country.values().length);
+        } catch (IntInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите номер национальности: ");
+        }
         Country country = Country.values()[Integer.parseInt(countryCode)];
+
 
         System.out.println("Введите координаты и имя локации: ");
         Double x = (double) 0;
@@ -91,24 +106,40 @@ public class WorkerGeneration {
         System.out.println("Введите размер зарплаты: ");
         double salary = 0;
         try {
-            salary = Double.parseDouble(ConsoleInputValidator.getDoubleInput());
+            salary = Double.parseDouble(ConsoleInputValidator.getSalaryInput());
         } catch (DoubleInputException e) {
             System.out.println(e.getMessage());
             System.out.println("Введите размер зарплаты: ");
         }
 
+
         System.out.println("Введите номер профессии: ");
         for (int i = 0; i < Position.values().length; i++) {
             System.out.println(" • " + i + " - " + Position.values()[i]);
         }
-        String positionCode = sc.nextLine().trim().toLowerCase();
+        String positionCode = null;
+        try {
+            positionCode = ConsoleInputValidator.getEnumException(Position.values().length);
+        } catch (IntInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите номер профессии: ");
+        }
         Position position = Position.values()[Integer.parseInt(positionCode)];
+
+
         System.out.println("Введите номер статуса: ");
         for (int i = 0; i < Status.values().length; i++) {
             System.out.println(" • " + i + " - " + Status.values()[i]);
         }
-        String statusCode = sc.nextLine().trim().toLowerCase();
+        String statusCode = null;
+        try {
+            statusCode = ConsoleInputValidator.getEnumException(Status.values().length);
+        } catch (IntInputException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Введите номер статуса: ");
+        }
         Status status = Status.values()[Integer.parseInt(statusCode)];
+
 
         System.out.println("Введите дату вструпления на должность в формате (ДД.ММ.ГГГГ): ");
         String startDateStr1 = sc.nextLine().trim().toLowerCase();
