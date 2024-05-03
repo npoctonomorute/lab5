@@ -13,18 +13,24 @@ import java.util.List;
 
 public class JsonParser {
     private final String fileName;
+
     public JsonParser(String fileName) {
         this.fileName = fileName;
     }
+
     public CollectionManager parse() throws FileNotFoundException {
         Gson gson = new Gson();
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
-        List<Worker> workers = gson.fromJson(reader, new TypeToken<List<Worker>>(){}.getType());
+        List<Worker> workers = gson.fromJson(reader, new TypeToken<List<Worker>>() {
+        }.getType());
         CollectionManager collection = new CollectionManager();
 
         for (Worker worker : workers) {
             worker.setId(CollectionManager.generateId());
             worker.setCreationDate(new Date());
+            worker.getId();
+            worker.getName();
+            worker.getSalary();
             collection.add(worker);
         }
         return collection;

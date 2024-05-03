@@ -2,6 +2,10 @@ package Commands.Exceptions;
 
 import App.AppContainer;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class ConsoleInputValidator {
@@ -82,5 +86,44 @@ public class ConsoleInputValidator {
             }
         }
     }
+
+    public static String getDataInput() throws ParseException {
+        Scanner sc = AppContainer.getSc();
+        String inputString = null;
+        inputString = sc.nextLine().trim().toLowerCase();
+        while (true) {
+            try {
+                DateFormat formatter1 = new SimpleDateFormat("dd.MM.yyyy");
+                Date birthday1 = formatter1.parse(inputString);
+                return inputString;
+            } catch (ParseException e) {
+                System.out.println("Неверный формат ввода даты.");
+            }
+        }
+    }
 }
+//    public static String getDoubleInput() throws DoubleInputException {
+//        Scanner sc = AppContainer.getSc();
+//        String inputString = null;
+//        inputString = sc.nextLine().trim().toLowerCase();
+//        while (true) {
+//            try {
+//                double num = Double.parseDouble(inputString);
+//                return inputString;
+//            } catch (NumberFormatException e) {
+//                System.out.println("Введен не double, попробуйте снова: ");
+//                inputString = sc.nextLine();
+//            }
+//        }
+//    }
+
+//System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
+//        String birthdayStr1 = sc.nextLine().trim().toLowerCase();
+//        DateFormat formatter1 = new SimpleDateFormat("dd.MM.yyyy");
+//        Date birthday1;
+//        try {
+//        Date birthday1 = formatter1.parse(birthdayStr1);
+//        } catch (ParseException e) {
+//        throw new RuntimeException("Неверный формат ввода даты.");
+//        }
 

@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="lab5:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="make some exceptions">
-      <change afterPath="$PROJECT_DIR$/src/Commands/Exceptions/BiggerThatZero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Commands/Exceptions/EnumException.java" afterDir="false" />
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="everything except of DataException">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lab5_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Commands/Exceptions/DataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amogus.json" beforeDir="false" afterPath="$PROJECT_DIR$/amogus.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/App/CollectionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/App/CollectionManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Exceptions/ConsoleInputValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Exceptions/ConsoleInputValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/Generators/WorkerGeneration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/Generators/WorkerGeneration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/CollectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Commands/Exceptions/ConsoleInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exceptions/ConsoleInputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Exceptions/IntInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exceptions/IntInputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Generators/WorkerGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Generators/WorkerGeneration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JSON/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSON/JsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +60,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -64,32 +77,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/makar/IdeaProjects/lab5&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/makar/IdeaProjects/lab5/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "OverrideImplement.generate.javadoc": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/makar/IdeaProjects/lab5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/makar/IdeaProjects/lab5/src/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Processing" />
@@ -145,7 +158,7 @@
       <workItem from="1714668365886" duration="7777000" />
       <workItem from="1714714803092" duration="4475000" />
       <workItem from="1714729570294" duration="4396000" />
-      <workItem from="1714741579382" duration="5421000" />
+      <workItem from="1714741579382" duration="12460000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -283,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714738074931</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="everything except of DataException">
+      <option name="closed" value="true" />
+      <created>1714749060109</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714749060109</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +338,7 @@
     <MESSAGE value="experiment with json" />
     <MESSAGE value="complete, todo: exceptions" />
     <MESSAGE value="make some exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="make some exceptions" />
+    <MESSAGE value="everything except of DataException" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything except of DataException" />
   </component>
 </project>
