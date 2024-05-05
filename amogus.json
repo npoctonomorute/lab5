@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "dfad",
+    "creationDate": "May 6, 2024, 1:02:35 AM",
+    "salary": 1.2232651561651656E16,
+    "startDate": "Nov 11, 1111, 12:00:00 AM",
+    "position": "LEAD_DEVELOPER",
+    "status": "REGULAR",
+    "person": {
+      "birthday": "Nov 11, 1111, 12:00:00 AM",
+      "hairColor": "BLUE",
+      "nationality": "FRANCE",
+      "location": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 4.0,
+        "name": "dgfgf"
+      }
+    }
+  }
+]
