@@ -9,17 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="everything except of DataException">
-      <change afterPath="$PROJECT_DIR$/src/Commands/Exceptions/CollectionException.java" afterDir="false" />
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="final version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amogus.json" beforeDir="false" afterPath="$PROJECT_DIR$/amogus.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/lab5_jar/lab5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lab5_jar/lab5.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Data/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Data/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/JSON/JsonParser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/JSON/JsonParser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/JSON/JsonParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/JSON/JsonParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/RemoveKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/RemoveKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JSON/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JSON/JsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +149,10 @@
       <workItem from="1714714803092" duration="4475000" />
       <workItem from="1714729570294" duration="4396000" />
       <workItem from="1714741579382" duration="12460000" />
-      <workItem from="1714927094208" duration="7625000" />
+      <workItem from="1714927094208" duration="8136000" />
+      <workItem from="1715007497875" duration="2600000" />
+      <workItem from="1715955372435" duration="2936000" />
+      <workItem from="1716139763950" duration="459000" />
     </task>
     <task id="LOCAL-00001" summary="add commands classes">
       <option name="closed" value="true" />
@@ -303,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714749060109</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="final version">
+      <option name="closed" value="true" />
+      <created>1714947859138</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714947859138</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +341,7 @@
     <MESSAGE value="complete, todo: exceptions" />
     <MESSAGE value="make some exceptions" />
     <MESSAGE value="everything except of DataException" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything except of DataException" />
+    <MESSAGE value="final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version" />
   </component>
 </project>
