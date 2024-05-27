@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="lab5:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="final version">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/Commands/RemoveKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;npoctonomorute&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8f83764c-70d7-4bf2-889d-27e17034ff47" />
+        <option name="url" value="https://github.com/npoctonomorute/lab5.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ejL1qLevDpZUHtzx9oROvwpnmv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/makar/IdeaProjects/lab5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/makar/IdeaProjects/lab5/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Processing" />
+      <recent name="Data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\makar\IdeaProjects\lab5" />
+      <recent name="C:\Users\makar\IdeaProjects\lab5\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Commands" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="lab5" />
+      <option name="PROGRAM_PARAMETERS" value="C:\\Users\\makar\\IdeaProjects\\lab5\\amogus.json" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a7f79fd-c931-4178-a00e-246af4ad285e" name="Changes" comment="" />
+      <created>1712412834200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712412834200</updated>
+      <workItem from="1712412834938" duration="1953000" />
+      <workItem from="1712486310210" duration="13209000" />
+      <workItem from="1712758322019" duration="2158000" />
+      <workItem from="1712914648006" duration="2590000" />
+      <workItem from="1712928158918" duration="6900000" />
+      <workItem from="1713107566732" duration="734000" />
+      <workItem from="1713354358075" duration="8702000" />
+      <workItem from="1713449790089" duration="13093000" />
+      <workItem from="1713532623390" duration="12576000" />
+      <workItem from="1713545441972" duration="448000" />
+      <workItem from="1713545968048" duration="1047000" />
+      <workItem from="1713881358485" duration="1210000" />
+      <workItem from="1713961313801" duration="7608000" />
+      <workItem from="1714214722853" duration="5488000" />
+      <workItem from="1714567779163" duration="7653000" />
+      <workItem from="1714634865461" duration="24371000" />
+      <workItem from="1714668365886" duration="7777000" />
+      <workItem from="1714714803092" duration="4475000" />
+      <workItem from="1714729570294" duration="4396000" />
+      <workItem from="1714741579382" duration="12460000" />
+      <workItem from="1714927094208" duration="8136000" />
+      <workItem from="1715007497875" duration="2600000" />
+      <workItem from="1715955372435" duration="2936000" />
+      <workItem from="1716139763950" duration="459000" />
+    </task>
+    <task id="LOCAL-00001" summary="add commands classes">
+      <option name="closed" value="true" />
+      <created>1712491979476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712491979476</updated>
+    </task>
+    <task id="LOCAL-00002" summary="make help, show, clear methods">
+      <option name="closed" value="true" />
+      <created>1712493523407</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712493523407</updated>
+    </task>
+    <task id="LOCAL-00003" summary="make Info, Insert, RemoveKey, Update methods">
+      <option name="closed" value="true" />
+      <created>1712496248138</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712496248138</updated>
+    </task>
+    <task id="LOCAL-00004" summary="make Info, Insert, RemoveKey, Update methods">
+      <option name="closed" value="true" />
+      <created>1712933499910</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712933499910</updated>
+    </task>
+    <task id="LOCAL-00005" summary="make Info, Insert, RemoveKey, Update methods">
+      <option name="closed" value="true" />
+      <created>1712933553941</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712933553941</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add parser and validator, idk what to do">
+      <option name="closed" value="true" />
+      <created>1712935155459</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712935155459</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add parser and validator, idk what to do">
+      <option name="closed" value="true" />
+      <created>1712935194051</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712935194052</updated>
+    </task>
+    <task id="LOCAL-00008" summary="edit all command classes, add Invoker">
+      <option name="closed" value="true" />
+      <created>1713378466166</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713378466166</updated>
+    </task>
+    <task id="LOCAL-00009" summary="do Help, Insert, ty Artem">
+      <option name="closed" value="true" />
+      <created>1713456490341</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713456490342</updated>
+    </task>
+    <task id="LOCAL-00010" summary="do all Command classes, except of Save and ExecuteScript">
+      <option name="closed" value="true" />
+      <created>1713546868644</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713546868644</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add PersonGeneration, WorkerGeneration to maker exceptions for them">
+      <option name="closed" value="true" />
+      <created>1713970551007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713970551007</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add PersonGeneration, WorkerGeneration (final)">
+      <option name="closed" value="true" />
+      <created>1713971380306</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713971380306</updated>
+    </task>
+    <task id="LOCAL-00013" summary="make ExecuteScript, AppContainer">
+      <option name="closed" value="true" />
+      <created>1714647656277</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714647656277</updated>
+    </task>
+    <task id="LOCAL-00014" summary="make ExecuteScript, AppContainer">
+      <option name="closed" value="true" />
+      <created>1714678715562</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714678715563</updated>
+    </task>
+    <task id="LOCAL-00015" summary="experiment with json">
+      <option name="closed" value="true" />
+      <created>1714682968172</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714682968173</updated>
+    </task>
+    <task id="LOCAL-00016" summary="complete, todo: exceptions">
+      <option name="closed" value="true" />
+      <created>1714684388930</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714684388931</updated>
+    </task>
+    <task id="LOCAL-00017" summary="make some exceptions">
+      <option name="closed" value="true" />
+      <created>1714738074931</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714738074931</updated>
+    </task>
+    <task id="LOCAL-00018" summary="everything except of DataException">
+      <option name="closed" value="true" />
+      <created>1714749060109</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714749060109</updated>
+    </task>
+    <task id="LOCAL-00019" summary="final version">
+      <option name="closed" value="true" />
+      <created>1714947859138</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714947859138</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="add commands classes" />
+    <MESSAGE value="make help, show, clear methods" />
+    <MESSAGE value="make Info, Insert, RemoveKey, Update methods" />
+    <MESSAGE value="add parser and validator, idk what to do" />
+    <MESSAGE value="edit all command classes, add Invoker" />
+    <MESSAGE value="do Help, Insert, ty Artem" />
+    <MESSAGE value="do all Command classes, except of Save and ExecuteScript" />
+    <MESSAGE value="add PersonGeneration, WorkerGeneration to maker exceptions for them" />
+    <MESSAGE value="add PersonGeneration, WorkerGeneration (final)" />
+    <MESSAGE value="make ExecuteScript, AppContainer" />
+    <MESSAGE value="experiment with json" />
+    <MESSAGE value="complete, todo: exceptions" />
+    <MESSAGE value="make some exceptions" />
+    <MESSAGE value="everything except of DataException" />
+    <MESSAGE value="final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version" />
+  </component>
+</project>
