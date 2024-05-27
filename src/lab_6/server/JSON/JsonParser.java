@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.time.DateTimeException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class JsonParser {
@@ -19,23 +20,28 @@ public class JsonParser {
         this.fileName = fileName;
     }
 
-    public CollectionManager parse() throws FileNotFoundException {
+    public void parse() {
         Gson gson = new Gson();
-        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader(fileName));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         List<Worker> workers = gson.fromJson(reader, new TypeToken<List<Worker>>() {
         }.getType());
-        CollectionManager collection = new CollectionManager();
+
+        HashMap<Long, Worker> map = new HashMap<>();
 
         for (Worker worker : workers) {
-            worker.setId(CollectionManager.generateId());
-            worker.setCreationDate(new Date());
-            try {
-                long id = worker.getId();
-            } catch (NumberFormatException e) {
-                System.out.println(e.getMessage());
-                System.exit(0);
-            }
-            //long id = worker.getId();
+//            worker.setId(CollectionManager.generateId());
+//            worker.setCreationDate(new Date());
+//            try {
+//                long id = worker.getId();
+//            } catch (NumberFormatException e) {
+//                System.out.println(e.getMessage());
+//                System.exit(0);
+//            }
             String name = worker.getName();
             if (name == null || name.isEmpty()) {
                 System.out.println("Неверный формат имени.");
@@ -79,8 +85,6 @@ public class JsonParser {
             Country country = worker.getPerson().getNationality();
             Status status = worker.getStatus();
             Position position = worker.getPosition();
-            Date creationDate = worker.getCreationDate();
-            Date startDate = worker.getStartDate();
 
             boolean flag1 = false;
             for (Color i : Color.values()) {
@@ -130,8 +134,9 @@ public class JsonParser {
                 System.exit(0);
             }
 
-            collection.add(worker);
+            map.put(worker.getId(), worker);
         }
-        return collection;
+
+        CollectionManager.setMap(map);
     }
 }

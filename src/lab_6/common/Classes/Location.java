@@ -1,6 +1,8 @@
 package lab_6.common.Classes;
 
-public class Location {
+import java.io.Serializable;
+
+public class Location implements Serializable {
     private Double x; //Поле не может быть null
     private Double y;
     private Double z; //Поле не может быть null

@@ -1,44 +1,34 @@
 package lab_6.common.Classes;
 
+import lab_6.common.Classes.dto.WorkerDTO;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class Worker implements Comparable<Worker>, Serializable {
     private final static long serialVersionID = 22335L;
-    private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-    private String name; //Поле не может быть null, Строка не может быть пустой
-    private Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private double salary; //Значение поля должно быть больше 0
-    private Date startDate; //Поле не может быть null
-    private Position position; //Поле может быть null
-    private Status status; //Поле не может быть null
-    private Person person; //Поле может быть null
+    private final long id;
+    private final String name;
+    private final Date creationDate;
+    private final double salary;
+    private final Date startDate;
+    private final Position position;
+    private final Status status;
+    private final Person person;
 
-    public Worker(long id, String name, Date creationDate, double salary, Date startDate, Position position, Status status, Person person) {
+    public Worker(long id, WorkerDTO dto) {
         this.id = id;
-        this.name = name;
-        this.creationDate = creationDate;
-        this.salary = salary;
-        this.startDate = startDate;
-        this.position = position;
-        this.status = status;
-        this.person = person;
-    }
-
-    public boolean check() {
-        if ((name == null) || (creationDate == null) || (salary < 0) || (startDate == null) || (position == null) || (status == null) || (person == null)) {
-            return false;
-        } else {
-            return true;
-        }
+        this.name = dto.getName();
+        this.creationDate = new Date();
+        this.salary = dto.getSalary();
+        this.startDate = dto.getStartDate();
+        this.position = dto.getPosition();
+        this.status = dto.getStatus();
+        this.person = dto.getPerson();
     }
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -47,10 +37,6 @@ public class Worker implements Comparable<Worker>, Serializable {
 
     public Date getCreationDate() {
         return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
     }
 
     public double getSalary() {
@@ -72,7 +58,6 @@ public class Worker implements Comparable<Worker>, Serializable {
     public Person getPerson() {
         return person;
     }
-
 
     @Override
     public int compareTo(Worker o) {

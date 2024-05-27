@@ -1,6 +1,8 @@
 package lab_6.common.Classes;
 
-public enum Position {
+import java.io.Serializable;
+
+public enum Position implements Serializable {
     ENGINEER,
     LEAD_DEVELOPER,
     BAKER,

@@ -1,13 +1,14 @@
 package lab_6.server;
 
 import lab_6.common.Classes.Worker;
+import lab_6.common.Classes.dto.WorkerDTO;
 
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 
 public class CollectionManager {
-    private static final HashMap<Long, Worker> collection = new HashMap<Long, Worker>();
+    private static HashMap<Long, Worker> collection = new HashMap<Long, Worker>();
 
     private static long lastId = 0;
 
@@ -37,12 +38,16 @@ public class CollectionManager {
         collection.remove(key);
     }
 
-    public static void show() {
-        System.out.println(collection);
+    public static Worker update(long key, WorkerDTO dto) {
+        Worker worker = new Worker(key, dto);
+        collection.replace(key, worker);
+        return worker;
     }
 
-    public static void update(long key, Worker value) {
-        collection.replace(key, value);
+    public static Worker create(WorkerDTO dto) {
+        Worker worker = new Worker(CollectionManager.generateId(), dto);
+        collection.put(worker.getId(), worker);
+        return worker;
     }
 
     public static String getType() {
@@ -51,6 +56,11 @@ public class CollectionManager {
 
     public static HashMap<Long, Worker> getMap() {
         return collection;
+    }
+
+    public static void setMap(HashMap<Long, Worker> collection) {
+        CollectionManager.collection = collection;
+        collection.keySet().stream().max(Long::compareTo).ifPresent(id -> lastId = id);
     }
 
     public static Date getInitializationDate() {

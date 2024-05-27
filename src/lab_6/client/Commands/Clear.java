@@ -1,6 +1,9 @@
 package lab_6.client.Commands;
 
-import lab_6.server.CollectionManager;
+import lab_6.common.network.ActionAlias;
+import lab_6.common.network.Request;
+import lab_6.common.network.RequestSender;
+import lab_6.common.network.Response;
 
 public class Clear implements Command {
     /**
@@ -8,8 +11,10 @@ public class Clear implements Command {
      */
     @Override
     public void execute(String arg) {
-        CollectionManager.clear();
-        System.out.println("Коллекция очищена.");
+        Request request = new Request(ActionAlias.CLEAR);
+        Response response = RequestSender.send(request);
+        Integer deleted = (Integer) response.getData();
+        System.out.println("Все работяги выпилились. Их было - " + deleted);
     }
 
     /**

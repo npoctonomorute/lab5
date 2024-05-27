@@ -1,12 +1,12 @@
 package lab_6.client.Commands.Generators;
 
 import lab_6.client.App.AppContainer;
-import lab_6.client.Commands.Exceptions.EmptyStringException;
-import lab_6.common.Classes.*;
-import lab_6.server.CollectionManager;
 import lab_6.client.Commands.Exceptions.ConsoleInputValidator;
 import lab_6.client.Commands.Exceptions.DoubleInputException;
+import lab_6.client.Commands.Exceptions.EmptyStringException;
 import lab_6.client.Commands.Exceptions.IntInputException;
+import lab_6.common.Classes.*;
+import lab_6.common.Classes.dto.WorkerDTO;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -15,8 +15,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class WorkerGeneration {
-    public Worker execute() {
-
+    public WorkerDTO execute() {
         Scanner sc = AppContainer.getSc();
 
         System.out.println("Введите имя: ");
@@ -141,7 +140,7 @@ public class WorkerGeneration {
         Status status = Status.values()[Integer.parseInt(statusCode)];
 
 
-        System.out.println("Введите дату вструпления на должность в формате (ДД.ММ.ГГГГ): ");
+        System.out.println("Введите дату вступления на должность в формате (ДД.ММ.ГГГГ): ");
         String startDateStr1 = sc.nextLine().trim().toLowerCase();
         DateFormat formatter12 = new SimpleDateFormat("dd.MM.yyyy");
         Date startDate1;
@@ -150,16 +149,13 @@ public class WorkerGeneration {
         } catch (ParseException e) {
             throw new RuntimeException("Неверный формат ввода даты.");
         }
-        Worker worker = new Worker(
-                CollectionManager.generateId(),
-                name,
-                new Date(),
-                salary,
-                startDate1,
-                position,
-                status,
-                new Person(birthday1, color, country, new Location(x, y, z, locationName))
-        );
-        return worker;
+        WorkerDTO workerDTO = new WorkerDTO();
+        workerDTO.setName(name);
+        workerDTO.setSalary(salary);
+        workerDTO.setStartDate(startDate1);
+        workerDTO.setPosition(position);
+        workerDTO.setStatus(status);
+        workerDTO.setPerson(new Person(birthday1, color, country, new Location(x, y, z, locationName)));
+        return workerDTO;
     }
 }

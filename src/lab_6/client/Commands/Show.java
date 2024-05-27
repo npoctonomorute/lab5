@@ -1,6 +1,12 @@
 package lab_6.client.Commands;
 
-import lab_6.server.CollectionManager;
+import lab_6.common.Classes.Worker;
+import lab_6.common.network.ActionAlias;
+import lab_6.common.network.Request;
+import lab_6.common.network.RequestSender;
+import lab_6.common.network.Response;
+
+import java.util.HashMap;
 
 public class Show implements Command {
     /**
@@ -8,7 +14,16 @@ public class Show implements Command {
      */
     @Override
     public void execute(String arg) {
-        CollectionManager.show();
+        Request request = new Request(ActionAlias.SHOW);
+        Response response = RequestSender.send(request);
+        HashMap<Long, Worker> workers = (HashMap<Long, Worker>) response.getData();
+        if (workers.isEmpty()) {
+            System.out.println("Работяги не пришли");
+        } else {
+            for (Worker worker : workers.values()) {
+                System.out.println(worker.toString());
+            }
+        }
     }
 
     /**

@@ -1,9 +1,8 @@
 package lab_6.client.Commands;
 
-import lab_6.client.App.AppContainer;
-import lab_6.server.CollectionManager;
-
-import java.util.Scanner;
+import lab_6.common.network.ActionAlias;
+import lab_6.common.network.Request;
+import lab_6.common.network.RequestSender;
 
 public class RemoveKey implements Command {
 
@@ -13,9 +12,9 @@ public class RemoveKey implements Command {
      */
     @Override
     public void execute(String arg) {
-        Scanner sc = AppContainer.getSc();
-        CollectionManager.removeKey(Long.parseLong(arg));
-        System.out.println("Элемент с ключом " + arg + " удален.");
+        Request request = new Request(ActionAlias.REMOVE, Long.parseLong(arg));
+        RequestSender.send(request);
+        System.out.println("Работяга под номером " + arg + " выпилился.");
     }
 
     /**

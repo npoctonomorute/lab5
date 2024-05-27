@@ -14,7 +14,6 @@ public class Invoker {
         commands.put("update", new Update());
         commands.put("remove_key", new RemoveKey());
         commands.put("clear", new Clear());
-        commands.put("save", new Save());
         commands.put("exit", new Exit());
         commands.put("remove_greater", new RemoveGreater());
         commands.put("remove_lower", new RemoveLower());

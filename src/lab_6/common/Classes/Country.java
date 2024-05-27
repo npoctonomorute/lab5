@@ -1,6 +1,8 @@
 package lab_6.common.Classes;
 
-public enum Country {
+import java.io.Serializable;
+
+public enum Country implements Serializable {
     USA,
     FRANCE,
     INDIA,

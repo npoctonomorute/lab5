@@ -1,8 +1,9 @@
 package lab_6.common.Classes;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Person {
+public class Person implements Serializable {
     private Date birthday; //Поле не может быть null
     private Color hairColor; //Поле может быть null
     private Country nationality; //Поле не может быть null

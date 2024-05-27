@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class JsonWriter {
+    public static final String STORAGE_FILE = "amogus.json";
+
     private final CollectionManager collection;
     private final String fileName;
 
@@ -15,11 +17,15 @@ public class JsonWriter {
         this.fileName = fileName;
     }
 
-    public void write() throws IOException {
-        Gson gson = new Gson();
-        String json = gson.toJson(CollectionManager.getAll());
-        FileWriter fileWriter = new FileWriter("amogus.json");
-        fileWriter.write(json);
-        fileWriter.close();
+    public static void save() {
+        try {
+            Gson gson = new Gson();
+            String json = gson.toJson(CollectionManager.getAll());
+            FileWriter fileWriter = new FileWriter("amogus.json");
+            fileWriter.write(json);
+            fileWriter.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
