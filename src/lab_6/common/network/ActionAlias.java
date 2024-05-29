@@ -5,5 +5,10 @@ public enum ActionAlias {
     SHOW,
     REMOVE,
     UPDATE,
+    INFO,
+    REMOVE_LOWER,
+    REMOVE_BY_POSITION,
+    REMOVE_GREATER,
+    FILTER_BY_PERSON,
     CLEAR,
 }

@@ -14,6 +14,11 @@ public class Router {
             ActionAlias.ADD, new CreateAction(),
             ActionAlias.UPDATE, new UpdateAction(),
             ActionAlias.REMOVE, new DeleteAction(),
+            ActionAlias.REMOVE_LOWER, new RemoveLowerAction(),
+            ActionAlias.INFO, new InfoAction(),
+            ActionAlias.REMOVE_BY_POSITION, new RemoveByPositionAction(),
+            ActionAlias.REMOVE_GREATER, new RemoveGreaterAction(),
+            ActionAlias.FILTER_BY_PERSON, new FilterByPersonAction(),
             ActionAlias.CLEAR, new ClearAction()
     );
 

@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Worker implements Comparable<Worker>, Serializable {
-    private final static long serialVersionID = 22335L;
+    //    private final static long serialVersionID = 22335L;
     private final long id;
     private final String name;
     private final Date creationDate;

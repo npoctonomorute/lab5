@@ -4,9 +4,12 @@ import lab_6.common.network.Request;
 import lab_6.common.network.Response;
 import lab_6.common.network.Serializer;
 import lab_6.server.JSON.JsonParser;
+import lab_6.server.JSON.JsonWriter;
 import lab_6.server.app.Router;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -28,6 +31,8 @@ public class ServerMain {
             System.out.println("UDP сервер запущен...");
             Router router = new Router();
 
+            BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+
             while (true) {
                 DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
                 socket.receive(receivePacket);
@@ -43,6 +48,13 @@ public class ServerMain {
                 byte[] responseData = responseText.getBytes();
                 DatagramPacket sendPacket = new DatagramPacket(responseData, responseData.length, clientAddress, clientPort);
                 socket.send(sendPacket);
+                while (console.ready()) {
+                    String input = console.readLine();
+                    if (input.equals("save")) {
+                        JsonWriter.save();
+                        System.out.println("Collection saved");
+                    }
+                }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -38,12 +38,10 @@ public class PersonGeneration {
         Double z = Double.parseDouble(parts[5]);
         String locName = parts[6];
 
-        Person person = new Person(birthday2,
+        return new Person(birthday2,
                 color,
                 country,
                 new Location(x, y, z, locName));
-
-        return person;
     }
 
 }

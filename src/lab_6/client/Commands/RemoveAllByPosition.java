@@ -1,10 +1,10 @@
 package lab_6.client.Commands;
 
-import lab_6.server.CollectionManager;
 import lab_6.common.Classes.Position;
-import lab_6.common.Classes.Worker;
-
-import java.util.HashMap;
+import lab_6.common.network.ActionAlias;
+import lab_6.common.network.Request;
+import lab_6.common.network.RequestSender;
+import lab_6.common.network.Response;
 
 public class RemoveAllByPosition implements Command {
     /**
@@ -12,23 +12,12 @@ public class RemoveAllByPosition implements Command {
      */
     @Override
     public void execute(String arg) {
-
-        System.out.println("Начинается поиск...");
-
-        String positionCode = arg;
-        Position position = Position.values()[Integer.parseInt(positionCode)];
-
-        HashMap<Long, Worker> coll = CollectionManager.getMap();
-        boolean flag = false;
-        for (Worker worker : coll.values()) {
-            Position listPosition = worker.getPosition();
-            if (listPosition.equals(position)) {
-                flag = true;
-                CollectionManager.removeKey(worker.getId());
-            }
-        }
-        if (flag) {
-            System.out.println("Работяги с заданным position существуют, поэтому мы их уже удалили!");
+        Position position = Position.values()[Integer.parseInt(arg)];
+        Request request = new Request(ActionAlias.REMOVE_BY_POSITION, position);
+        Response response = RequestSender.send(request);
+        Integer removed = (Integer) response.getData();
+        if (removed > 0) {
+            System.out.println("Работяги с заданным position существуют, поэтому мы их уже удалили! Сокращено работяг: " + removed);
         } else {
             System.out.println("Oopsie! Нет работяг с заданным position :(");
         }

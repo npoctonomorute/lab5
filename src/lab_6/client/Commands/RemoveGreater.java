@@ -1,11 +1,11 @@
 package lab_6.client.Commands;
 
 import lab_6.client.Commands.Generators.WorkerGeneration;
-import lab_6.common.Classes.Worker;
 import lab_6.common.Classes.dto.WorkerDTO;
-import lab_6.server.CollectionManager;
-
-import java.util.HashMap;
+import lab_6.common.network.ActionAlias;
+import lab_6.common.network.Request;
+import lab_6.common.network.RequestSender;
+import lab_6.common.network.Response;
 
 public class RemoveGreater implements Command {
 
@@ -14,18 +14,13 @@ public class RemoveGreater implements Command {
      */
     @Override
     public void execute(String arg) {
+        System.out.println("Начинается генерации работяги для сравнения!!!");
         WorkerGeneration workerGeneration = new WorkerGeneration();
         WorkerDTO workerDTO = workerGeneration.execute();
-        Worker worker = new Worker(CollectionManager.generateId(), workerDTO);
-        HashMap<Long, Worker> coll = CollectionManager.getMap();
-        for (Worker newWorker : coll.values()) {
-            if (worker.compareTo(newWorker) < 0) {
-                CollectionManager.removeKey(newWorker.getId());
-                System.out.println("Работяга с ID = " + newWorker.getId() + " устранен, у него слишком большая зарплата!");
-            } else {
-                System.out.println("Работяга с ID = " + newWorker.getId() + " оставлен, его зарплата достаточно мала!");
-            }
-        }
+        Request request = new Request(ActionAlias.REMOVE_GREATER, workerDTO);
+        Response response = RequestSender.send(request);
+        Integer removed = (Integer) response.getData();
+        System.out.println("Сокращено работяг: " + removed);
     }
 
     /**

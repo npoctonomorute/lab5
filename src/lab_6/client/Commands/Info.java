@@ -1,6 +1,9 @@
 package lab_6.client.Commands;
 
-import lab_6.server.CollectionManager;
+import lab_6.common.network.ActionAlias;
+import lab_6.common.network.Request;
+import lab_6.common.network.RequestSender;
+import lab_6.common.network.Response;
 
 public class Info implements Command {
     /**
@@ -8,7 +11,10 @@ public class Info implements Command {
      */
     @Override
     public void execute(String arg) {
-        System.out.println("Тип коллекции: " + CollectionManager.getType() + ", дата инициализации: " + CollectionManager.getInitializationDate() + ", размер коллекции: " + CollectionManager.getSize());
+        Request request = new Request(ActionAlias.INFO);
+        Response response = RequestSender.send(request);
+        String result = (String) response.getData();
+        System.out.println(result);
     }
 
     /**
