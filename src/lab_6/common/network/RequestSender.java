@@ -7,8 +7,8 @@ import java.net.InetAddress;
 
 public class RequestSender {
 
-    public static final int SERVER_PORT = 9876;
-    public static final String SERVER_HOST = "localhost";
+    public static final int SERVER_PORT = 2929;
+    public static final String SERVER_HOST = "helios.cs.ifmo.ru"; //helios.cs.ifmo.ru | localhost
 
     public static Response send(Request request) {
         try (DatagramSocket socket = new DatagramSocket()) {

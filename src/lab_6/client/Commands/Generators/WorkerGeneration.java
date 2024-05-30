@@ -118,7 +118,7 @@ public class WorkerGeneration {
         }
         String positionCode = null;
         try {
-            positionCode = ConsoleInputValidator.getEnumException(Position.values().length);
+            positionCode = ConsoleInputValidator.getEnumException(Position.values().length - 1);
         } catch (IntInputException e) {
             System.out.println(e.getMessage());
             System.out.println("Введите номер профессии: ");
@@ -132,7 +132,7 @@ public class WorkerGeneration {
         }
         String statusCode = null;
         try {
-            statusCode = ConsoleInputValidator.getEnumException(Status.values().length);
+            statusCode = ConsoleInputValidator.getEnumException(Status.values().length - 1);
         } catch (IntInputException e) {
             System.out.println(e.getMessage());
             System.out.println("Введите номер статуса: ");
