@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 public class ServerRequest implements Serializable {
     private final static long serialVersionUID = 22335L;
+
     private String commandName;
     private Worker worker;
 

@@ -15,7 +15,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 public class ServerMain {
-    public static final int SERVER_PORT = 2929;
+    public static final int SERVER_PORT = 22335;
     public static final String STORAGE_FILE = "amogus.json";
 
     public static void main(String[] args) {

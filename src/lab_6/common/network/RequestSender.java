@@ -7,8 +7,8 @@ import java.net.InetAddress;
 
 public class RequestSender {
 
-    public static final int SERVER_PORT = 2929;
-    public static final String SERVER_HOST = "helios.cs.ifmo.ru"; //helios.cs.ifmo.ru | localhost
+    public static final int SERVER_PORT = 22335;
+    public static final String SERVER_HOST = "localhost"; //helios.cs.ifmo.ru | localhost
 
     public static Response send(Request request) {
         try (DatagramSocket socket = new DatagramSocket()) {
@@ -22,6 +22,7 @@ public class RequestSender {
             byte[] receiveData = new byte[8192];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             socket.receive(receivePacket);
+            socket.setSoTimeout(10000);
             String serializedResponse = new String(receivePacket.getData(), 0, receivePacket.getLength());
             return (Response) Serializer.deserializeFromString(serializedResponse);
         } catch (IOException e) {

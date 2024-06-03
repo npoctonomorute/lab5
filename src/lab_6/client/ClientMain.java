@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ClientMain {
     public static void main(String[] args) {
-        System.out.println("привет от амогусов ඞඞඞඞඞඞඞඞඞඞඞඞඞ");
+        System.out.println("атака амогусов началась ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ ඞ");
         Scanner sc = new Scanner(System.in);
         AppContainer.setSc(sc);
         Invoker invoker = new Invoker();
