@@ -18,23 +18,20 @@ public class WorkerGeneration {
         Scanner sc = ClientAppContainer.getSc();
 
         System.out.println("Введите имя: ");
-        String name = null;
-//        try {
-        name = ConsoleInputValidator.getNonEmptyInput();
-//        } catch (EmptyStringException e) {
-//            System.out.println(e.getMessage());
-//            System.out.println("Введите имя: ");
-//        }
+        String name = ConsoleInputValidator.getNonEmptyInput();
+
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
-        String birthdayStr1 = sc.nextLine().trim().toLowerCase();
-        DateFormat formatter1 = new SimpleDateFormat("dd.MM.yyyy");
-        Date birthday1;
-        try {
-            birthday1 = formatter1.parse(birthdayStr1);
-        } catch (ParseException e) {
-            throw new RuntimeException("Неверный формат ввода даты.");
-        }
+        Date birthday1 = null;
+        do {
+            try {
+                String birthdayStr1 = sc.nextLine().trim().toLowerCase();
+                DateFormat formatter1 = new SimpleDateFormat("dd.MM.yyyy");
+                birthday1 = formatter1.parse(birthdayStr1);
+            } catch (ParseException e) {
+                System.out.println("Неверный формат ввода даты.");
+            }
+        } while (birthday1 == null);
 
 
         System.out.println("Введите номер цвета волос: ");
@@ -66,9 +63,9 @@ public class WorkerGeneration {
 
 
         System.out.println("Введите координаты и имя локации: ");
-        Double x = (double) 0;
-        Double y = (double) 0;
-        Double z = (double) 0;
+        double x = 0;
+        double y = 0;
+        double z = 0;
         String locationName = null;
         System.out.println("Введите координату по x: ");
         try {
@@ -95,12 +92,7 @@ public class WorkerGeneration {
         }
 
         System.out.println("Введите название локации: ");
-//        try {
         locationName = ConsoleInputValidator.getNonEmptyInput();
-//        } catch (EmptyStringException e) {
-//            System.out.println(e.getMessage());
-//            System.out.println("Введите название локации: ");
-//        }
         System.out.println("Введите размер зарплаты: ");
         double salary = 0;
         try {
@@ -140,14 +132,16 @@ public class WorkerGeneration {
 
 
         System.out.println("Введите дату вступления на должность в формате (ДД.ММ.ГГГГ): ");
-        String startDateStr1 = sc.nextLine().trim().toLowerCase();
-        DateFormat formatter12 = new SimpleDateFormat("dd.MM.yyyy");
-        Date startDate1;
-        try {
-            startDate1 = formatter12.parse(startDateStr1);
-        } catch (ParseException e) {
-            throw new RuntimeException("Неверный формат ввода даты.");
-        }
+        Date startDate1 = null;
+        do {
+            try {
+                String startDateStr1 = sc.nextLine().trim().toLowerCase();
+                DateFormat formatter12 = new SimpleDateFormat("dd.MM.yyyy");
+                startDate1 = formatter12.parse(startDateStr1);
+            } catch (ParseException e) {
+                System.out.println("Неверный формат ввода даты.");
+            }
+        } while (startDate1 == null);
         WorkerDTO workerDTO = new WorkerDTO();
         workerDTO.setName(name);
         workerDTO.setSalary(salary);

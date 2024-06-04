@@ -13,8 +13,18 @@ public class Update implements Command {
 
     @Override
     public void execute(String arg) {
+        if (arg == null || arg.isEmpty()) {
+            System.out.println("Необходимо ID работяги");
+            return;
+        }
+        long key;
+        try {
+            key = Long.parseLong(arg);
+        } catch (NumberFormatException e) {
+            System.out.println("ID работяги должно быть целым числом");
+            return;
+        }
         System.out.println("Начинается замена работяги по ключу!!!");
-        long key = Long.parseLong(arg);
         WorkerGeneration workerGeneration = new WorkerGeneration();
         WorkerDTO workerDTO = workerGeneration.execute();
         workerDTO.setId(key);
