@@ -4,6 +4,7 @@ import lab_6.common.Classes.*;
 import lab_6.common.Classes.dto.WorkerDTO;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -82,52 +83,6 @@ public class PostgresCollectionManager {
         }
     }
 
-    public boolean removeKey(Long key) {
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where id = ? returning *");
-            preparedStatement.setLong(1, key);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            map = loadMap();
-            return resultSet.next();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public Worker createWorker(WorkerDTO workerDTO) {
-        try {
-            PreparedStatement ps = connection.prepareStatement(
-                    "insert into workers (name, salary, start_date, position, status, p_birthday, p_hair_color, p_nationality, p_loc_x, p_loc_y, p_loc_z, p_loc_name) " +
-                            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning *");
-            ps.setString(1, workerDTO.getName());
-            ps.setDouble(2, workerDTO.getSalary());
-//            ps.setInt(2, personDTO.getHeight());
-//            ps.setInt(3, personDTO.getEyeColor().ordinal());
-//            ps.setInt(4, personDTO.getHairColor().ordinal());
-//            ps.setInt(5, personDTO.getNationality().ordinal());
-//            Location location = personDTO.getLocation();
-//            if (location != null) {
-//                ps.setFloat(6, location.getX());
-//                ps.setFloat(7, location.getY());
-//                ps.setFloat(8, location.getZ());
-//                ps.setString(9, location.getName());
-//            } else {
-//                ps.setNull(6, Types.REAL);
-//                ps.setNull(7, Types.REAL);
-//                ps.setNull(8, Types.REAL);
-//                ps.setNull(9, Types.VARCHAR);
-//            }
-//            ps.setString(10, personDTO.getOwnerLogin());
-            ResultSet resultSet = ps.executeQuery();
-            resultSet.next();
-            Worker worker = transformResultSetToWorker(resultSet);
-            map.put(worker.getId(), worker);
-            return worker;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 //    public int clearCollection(User user) {
 //        try {
 //            PreparedStatement ps1 = connection.prepareStatement("select count(*) from persons where owner_login = ?");
@@ -144,4 +99,106 @@ public class PostgresCollectionManager {
 //            throw new RuntimeException(e);
 //        }
 //    }
+
+    public boolean removeKey(Long key) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where id = ? returning *");
+            preparedStatement.setLong(1, key);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            map = loadMap();
+            return resultSet.next();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Worker createWorker(WorkerDTO workerDTO) {
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    "insert into workers (name, salary, start_date, position, status, p_birthday, p_hair_color, p_nationality, p_loc_x, p_loc_y, p_loc_z, p_loc_name) " +
+                            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning *"
+            );
+            prepareStatementWithData(ps, workerDTO);
+            // ps.setString(13, workerDTO.getOwnerLogin());
+            ResultSet resultSet = ps.executeQuery();
+            resultSet.next();
+            Worker worker = transformResultSetToWorker(resultSet);
+            map.put(worker.getId(), worker);
+            return worker;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Worker updateWorker(Long id, WorkerDTO workerDTO) {
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    "update workers set name = ?, salary = ?, start_date = ?, position = ?, status = ?, p_birthday = ?, p_hair_color = ?, p_nationality = ?, p_loc_x = ?, p_loc_y = ?, p_loc_z = ?, p_loc_name = ?"
+                            + " where id = ? returning *"
+            );
+            prepareStatementWithData(ps, workerDTO);
+            ps.setLong(13, id);
+            // ps.setString(14, workerDTO.getOwnerLogin());
+            ResultSet resultSet = ps.executeQuery();
+            resultSet.next();
+            Worker worker = transformResultSetToWorker(resultSet);
+            map.put(worker.getId(), worker);
+            return worker;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void prepareStatementWithData(PreparedStatement statement, WorkerDTO workerDTO) throws SQLException {
+        statement.setString(1, workerDTO.getName());
+        statement.setDouble(2, workerDTO.getSalary());
+        statement.setDate(3, new Date(workerDTO.getStartDate().getTime()));
+        statement.setInt(4, workerDTO.getPosition().ordinal());
+        statement.setInt(5, workerDTO.getStatus().ordinal());
+        Person person = workerDTO.getPerson();
+        if (person != null) {
+            statement.setDate(6, new Date(person.getBirthday().getTime()));
+            statement.setInt(7, person.getHairColor().ordinal());
+            statement.setInt(8, person.getNationality().ordinal());
+            Location location = person.getLocation();
+            statement.setDouble(9, location.getX());
+            statement.setDouble(10, location.getY());
+            statement.setDouble(11, location.getZ());
+            statement.setString(12, location.getName());
+        } else {
+            statement.setNull(6, Types.DATE);
+            statement.setNull(7, Types.INTEGER);
+            statement.setNull(8, Types.INTEGER);
+            statement.setNull(9, Types.DOUBLE);
+            statement.setNull(10, Types.DOUBLE);
+            statement.setNull(11, Types.DOUBLE);
+            statement.setNull(12, Types.VARCHAR);
+        }
+    }
+
+    public ArrayList<Worker> filterByPerson(Person person) {
+        try {
+            ArrayList<Worker> result = new ArrayList<>();
+            PreparedStatement ps = connection.prepareStatement(
+                    "select * from workers where p_birthday = ? and p_hair_color = ? and p_nationality = ? " +
+                            "and p_loc_x = ? and p_loc_y = ? and p_loc_z = ? and p_loc_name = ?"
+            );
+            ps.setDate(1, new Date(person.getBirthday().getTime()));
+            ps.setInt(2, person.getHairColor().ordinal());
+            ps.setInt(3, person.getNationality().ordinal());
+            Location location = person.getLocation();
+            ps.setDouble(4, location.getX());
+            ps.setDouble(5, location.getY());
+            ps.setDouble(6, location.getZ());
+            ps.setString(7, location.getName());
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                Worker worker = transformResultSetToWorker(resultSet);
+                result.add(worker);
+            }
+            return result;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
