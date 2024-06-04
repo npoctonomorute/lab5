@@ -15,6 +15,10 @@ import java.net.InetAddress;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 
 public class ServerMain {
     public static final int SERVER_PORT = 22335;
@@ -30,35 +34,61 @@ public class ServerMain {
     }
 
     private static void runServer() {
-        try (DatagramSocket socket = new DatagramSocket(SERVER_PORT)) {
-            byte[] receiveData = new byte[8192];
+        ExecutorService forkJoinPool = new ForkJoinPool();
+        ExecutorService fixedThreadPool1 = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        ExecutorService fixedThreadPool2 = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        System.out.println("Запуск сервера...");
+        forkJoinPool.submit(() -> {
+            try (DatagramSocket socket = new DatagramSocket(SERVER_PORT)) {
+                byte[] receiveData = new byte[8192];
 
-            System.out.println("UDP сервер запущен...");
-            Router router = new Router();
+                System.out.println("UDP сервер запущен...");
+                Router router = new Router();
 
-            while (true) {
-                DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-                socket.receive(receivePacket);
-                String message = new String(receivePacket.getData(), 0, receivePacket.getLength());
-                Request request = (Request) Serializer.deserializeFromString(message);
+                while (true) {
+                    DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+                    socket.receive(receivePacket);
+                    String message = new String(receivePacket.getData(), 0, receivePacket.getLength());
+                    Request request = (Request) Serializer.deserializeFromString(message);
 
-                System.out.println("Получен запрос: " + request.getActionAlias());
-                if (request.getData() != null) {
-                    System.out.println("Данные: " + request.getData());
+                    System.out.println("Получен запрос: " + request.getActionAlias());
+                    if (request.getData() != null) {
+                        System.out.println("Данные: " + request.getData());
+                    }
+                    System.out.println();
+
+                    fixedThreadPool1.submit(() -> {
+                        Response response = router.resolve(request);
+
+                        fixedThreadPool2.submit(() -> {
+                            try {
+                                InetAddress clientAddress = receivePacket.getAddress();
+                                int clientPort = receivePacket.getPort();
+                                String responseText = Serializer.serializeToString(response);
+                                byte[] responseData = responseText.getBytes();
+                                DatagramPacket sendPacket = new DatagramPacket(responseData, responseData.length, clientAddress, clientPort);
+                                socket.send(sendPacket);
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
+                    });
                 }
-                System.out.println();
-
-                InetAddress clientAddress = receivePacket.getAddress();
-                int clientPort = receivePacket.getPort();
-                Response response = router.resolve(request);
-                String responseText = Serializer.serializeToString(response);
-                byte[] responseData = responseText.getBytes();
-                DatagramPacket sendPacket = new DatagramPacket(responseData, responseData.length, clientAddress, clientPort);
-                socket.send(sendPacket);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        });
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine().trim().toLowerCase();
+            if (line.equals("exit")) {
+                break;
+            } else {
+                System.out.println("Введите команду exit для остановки сервера");
+            }
         }
+        System.out.println("Сервер остановлен");
+        forkJoinPool.shutdown();
     }
 
     private static void connectDB() {
