@@ -1,4 +1,8 @@
-package lab_6.common.network;
+package lab_6.client.App;
+
+import lab_6.common.network.Request;
+import lab_6.common.network.Response;
+import lab_6.common.network.Serializer;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -11,6 +15,7 @@ public class RequestSender {
     public static final String SERVER_HOST = "localhost"; //helios.cs.ifmo.ru | localhost
 
     public static Response send(Request request) {
+        request.setUser(ClientAppContainer.getUser());
         try (DatagramSocket socket = new DatagramSocket()) {
             InetAddress serverAddress = InetAddress.getByName(SERVER_HOST);
 

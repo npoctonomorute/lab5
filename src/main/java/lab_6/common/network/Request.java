@@ -1,10 +1,13 @@
 package lab_6.common.network;
 
+import lab_6.common.Classes.User;
+
 import java.io.Serializable;
 
 public class Request implements Serializable {
     private Serializable data;
     private ActionAlias actionAlias;
+    private User user;
 
     public Request(ActionAlias actionAlias) {
         this.actionAlias = actionAlias;
@@ -29,5 +32,13 @@ public class Request implements Serializable {
 
     public void setActionAlias(ActionAlias actionAlias) {
         this.actionAlias = actionAlias;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

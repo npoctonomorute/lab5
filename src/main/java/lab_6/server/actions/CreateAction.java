@@ -15,6 +15,6 @@ public class CreateAction implements Action<Worker> {
     public Worker execute(Request request) {
         WorkerDTO workerDTO = (WorkerDTO) request.getData();
         PostgresCollectionManager collectionManager = ServerAppContainer.getCollectionManager();
-        return collectionManager.createWorker(workerDTO);
+        return collectionManager.createWorker(workerDTO, request.getUser());
     }
 }

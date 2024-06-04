@@ -7,14 +7,16 @@ import lab_6.server.app.ServerAppContainer;
 import lab_6.server.collection.PostgresCollectionManager;
 
 public class UpdateAction implements Action<Worker> {
-    /**
-     * @param request
-     * @return
-     */
-    @Override
     public Worker execute(Request request) {
         WorkerDTO workerDTO = (WorkerDTO) request.getData();
         PostgresCollectionManager collectionManager = ServerAppContainer.getCollectionManager();
+        Worker worker = collectionManager.getWorkerById(workerDTO.getId());
+        if (worker == null) {
+            return null;
+        }
+        if (!worker.getOwnerLogin().equals(request.getUser().getLogin())) {
+            return worker;
+        }
         return collectionManager.updateWorker(workerDTO.getId(), workerDTO);
     }
 }

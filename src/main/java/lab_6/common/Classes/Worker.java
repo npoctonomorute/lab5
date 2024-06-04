@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Worker implements Comparable<Worker>, Serializable {
-    //    private final static long serialVersionID = 22335L;
     private final long id;
     private final String name;
     private final Date creationDate;
@@ -15,6 +14,7 @@ public class Worker implements Comparable<Worker>, Serializable {
     private final Position position;
     private final Status status;
     private final Person person;
+    private final String ownerLogin;
 
     public Worker(long id, WorkerDTO dto) {
         this.id = id;
@@ -25,6 +25,7 @@ public class Worker implements Comparable<Worker>, Serializable {
         this.position = dto.getPosition();
         this.status = dto.getStatus();
         this.person = dto.getPerson();
+        this.ownerLogin = dto.getOwnerLogin();
     }
 
     public Worker(long id, WorkerDTO dto, Date creationDate) {
@@ -36,6 +37,7 @@ public class Worker implements Comparable<Worker>, Serializable {
         this.position = dto.getPosition();
         this.status = dto.getStatus();
         this.person = dto.getPerson();
+        this.ownerLogin = dto.getOwnerLogin();
     }
 
     public long getId() {
@@ -68,6 +70,10 @@ public class Worker implements Comparable<Worker>, Serializable {
 
     public Person getPerson() {
         return person;
+    }
+
+    public String getOwnerLogin() {
+        return ownerLogin;
     }
 
     @Override

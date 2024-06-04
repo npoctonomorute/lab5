@@ -14,6 +14,6 @@ public class RemoveLowerAction implements Action<Integer> {
     public Integer execute(Request request) {
         WorkerDTO workerDTO = (WorkerDTO) request.getData();
         PostgresCollectionManager collectionManager = ServerAppContainer.getCollectionManager();
-        return collectionManager.removeLower(workerDTO);
+        return collectionManager.removeLower(workerDTO, request.getUser());
     }
 }

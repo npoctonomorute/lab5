@@ -1,11 +1,11 @@
 package lab_6.client.Commands;
 
 import lab_6.client.App.ClientAppContainer;
+import lab_6.client.App.RequestSender;
 import lab_6.client.Commands.Exceptions.ConsoleInputValidator;
 import lab_6.common.Classes.User;
 import lab_6.common.network.ActionAlias;
 import lab_6.common.network.Request;
-import lab_6.common.network.RequestSender;
 import lab_6.common.network.Response;
 
 public class Register implements Command {

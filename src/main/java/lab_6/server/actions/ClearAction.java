@@ -12,6 +12,6 @@ public class ClearAction implements Action<Integer> {
     @Override
     public Integer execute(Request request) {
         PostgresCollectionManager collectionManager = ServerAppContainer.getCollectionManager();
-        return collectionManager.clear();
+        return collectionManager.clear(request.getUser());
     }
 }

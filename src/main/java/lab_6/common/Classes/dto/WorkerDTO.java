@@ -17,6 +17,8 @@ public class WorkerDTO implements Serializable {
     private Status status;
     private Person person;
 
+    private String ownerLogin;
+
     public long getId() {
         return id;
     }
@@ -71,5 +73,13 @@ public class WorkerDTO implements Serializable {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public String getOwnerLogin() {
+        return ownerLogin;
+    }
+
+    public void setOwnerLogin(String ownerLogin) {
+        this.ownerLogin = ownerLogin;
     }
 }

@@ -45,13 +45,15 @@ public class PostgresCollectionManager {
         return map.getClass().getSimpleName();
     }
 
-    public int clear() {
+    public int clear(User user) {
         try {
-            PreparedStatement ps1 = connection.prepareStatement("select count(*) from workers");
+            PreparedStatement ps1 = connection.prepareStatement("select count(*) from workers where owner_login = ?");
+            ps1.setString(1, user.getLogin());
             ResultSet resultSet = ps1.executeQuery();
             resultSet.next();
             int count = resultSet.getInt("count");
-            PreparedStatement ps2 = connection.prepareStatement("delete from workers where true");
+            PreparedStatement ps2 = connection.prepareStatement("delete from workers where owner_login = ?");
+            ps2.setString(1, user.getLogin());
             ps2.execute();
             map = loadMap();
             return count;
@@ -60,22 +62,19 @@ public class PostgresCollectionManager {
         }
     }
 
-//    public int clearCollection(User user) {
-//        try {
-//            PreparedStatement ps1 = connection.prepareStatement("select count(*) from persons where owner_login = ?");
-//            ps1.setString(1, user.getLogin());
-//            ResultSet resultSet = ps1.executeQuery();
-//            resultSet.next();
-//            int count = resultSet.getInt("count");
-//            PreparedStatement ps2 = connection.prepareStatement("delete from persons where owner_login = ?");
-//            ps2.setString(1, user.getLogin());
-//            ps2.execute();
-//            collection = loadCollection();
-//            return count;
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+    public Worker getWorkerById(Long id) {
+        try {
+            PreparedStatement ps = connection.prepareStatement("select * from workers where id = ?");
+            ps.setLong(1, id);
+            ResultSet resultSet1 = ps.executeQuery();
+            if (resultSet1.next()) {
+                return transformResultSetToWorker(resultSet1);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public boolean removeKey(Long key) {
         try {
@@ -89,14 +88,14 @@ public class PostgresCollectionManager {
         }
     }
 
-    public Worker createWorker(WorkerDTO workerDTO) {
+    public Worker createWorker(WorkerDTO workerDTO, User user) {
         try {
             PreparedStatement ps = connection.prepareStatement(
-                    "insert into workers (name, salary, start_date, position, status, p_birthday, p_hair_color, p_nationality, p_loc_x, p_loc_y, p_loc_z, p_loc_name) " +
-                            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning *"
+                    "insert into workers (name, salary, start_date, position, status, p_birthday, p_hair_color, p_nationality, p_loc_x, p_loc_y, p_loc_z, p_loc_name, owner_login) " +
+                            "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning *"
             );
             prepareStatementWithData(ps, workerDTO);
-            // ps.setString(13, workerDTO.getOwnerLogin());
+            ps.setString(13, user.getLogin());
             ResultSet resultSet = ps.executeQuery();
             resultSet.next();
             Worker worker = transformResultSetToWorker(resultSet);
@@ -115,12 +114,13 @@ public class PostgresCollectionManager {
             );
             prepareStatementWithData(ps, workerDTO);
             ps.setLong(13, id);
-            // ps.setString(14, workerDTO.getOwnerLogin());
             ResultSet resultSet = ps.executeQuery();
-            resultSet.next();
-            Worker worker = transformResultSetToWorker(resultSet);
-            map.put(worker.getId(), worker);
-            return worker;
+            if (resultSet.next()) {
+                Worker worker = transformResultSetToWorker(resultSet);
+                map.put(worker.getId(), worker);
+                return worker;
+            }
+            return null;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -179,12 +179,15 @@ public class PostgresCollectionManager {
         }
     }
 
-    public Integer removeLower(WorkerDTO workerDTO) {
+    public Integer removeLower(WorkerDTO workerDTO, User user) {
         int startSize = getSize();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where salary < ?");
-            preparedStatement.setDouble(1, workerDTO.getSalary());
-            preparedStatement.execute();
+            PreparedStatement ps = connection.prepareStatement(
+                    "delete from workers where salary < ? and owner_login = ?"
+            );
+            ps.setDouble(1, workerDTO.getSalary());
+            ps.setString(2, user.getLogin());
+            ps.execute();
             map = loadMap();
             return startSize - getSize();
         } catch (SQLException e) {
@@ -192,12 +195,15 @@ public class PostgresCollectionManager {
         }
     }
 
-    public Integer removeGreater(WorkerDTO workerDTO) {
+    public Integer removeGreater(WorkerDTO workerDTO, User user) {
         int startSize = getSize();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where salary > ?");
-            preparedStatement.setDouble(1, workerDTO.getSalary());
-            preparedStatement.execute();
+            PreparedStatement ps = connection.prepareStatement(
+                    "delete from workers where salary > ? and owner_login = ?"
+            );
+            ps.setDouble(1, workerDTO.getSalary());
+            ps.setString(2, user.getLogin());
+            ps.execute();
             map = loadMap();
             return startSize - getSize();
         } catch (SQLException e) {
@@ -225,6 +231,7 @@ public class PostgresCollectionManager {
                         resultSet.getString("p_loc_name")
                 )
         ));
+        workerDTO.setOwnerLogin(resultSet.getString("owner_login"));
         return new Worker(id, workerDTO, creationDate);
     }
 }
