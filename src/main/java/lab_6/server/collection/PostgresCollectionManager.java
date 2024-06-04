@@ -33,29 +33,6 @@ public class PostgresCollectionManager {
         }
     }
 
-    private Worker transformResultSetToWorker(ResultSet resultSet) throws SQLException {
-        WorkerDTO workerDTO = new WorkerDTO();
-        long id = resultSet.getLong("id");
-        Date creationDate = resultSet.getDate("creation_date");
-        workerDTO.setName(resultSet.getString("name"));
-        workerDTO.setSalary(resultSet.getDouble("salary"));
-        workerDTO.setStartDate(resultSet.getDate("start_date"));
-        workerDTO.setPosition(Position.values()[resultSet.getInt("position")]);
-        workerDTO.setStatus(Status.values()[resultSet.getInt("status")]);
-        workerDTO.setPerson(new Person(
-                resultSet.getDate("p_birthday"),
-                Color.values()[resultSet.getInt("p_hair_color")],
-                Country.values()[resultSet.getInt("p_hair_color")],
-                new Location(
-                        resultSet.getDouble("p_loc_x"),
-                        resultSet.getDouble("p_loc_y"),
-                        resultSet.getDouble("p_loc_z"),
-                        resultSet.getString("p_loc_name")
-                )
-        ));
-        return new Worker(id, workerDTO, creationDate);
-    }
-
     public Map<Long, Worker> getMap() {
         return map;
     }
@@ -105,7 +82,7 @@ public class PostgresCollectionManager {
             PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where id = ? returning *");
             preparedStatement.setLong(1, key);
             ResultSet resultSet = preparedStatement.executeQuery();
-            map = loadMap();
+            map.remove(key);
             return resultSet.next();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -200,5 +177,54 @@ public class PostgresCollectionManager {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Integer removeLower(WorkerDTO workerDTO) {
+        int startSize = getSize();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where salary < ?");
+            preparedStatement.setDouble(1, workerDTO.getSalary());
+            preparedStatement.execute();
+            map = loadMap();
+            return startSize - getSize();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Integer removeGreater(WorkerDTO workerDTO) {
+        int startSize = getSize();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from workers where salary > ?");
+            preparedStatement.setDouble(1, workerDTO.getSalary());
+            preparedStatement.execute();
+            map = loadMap();
+            return startSize - getSize();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private Worker transformResultSetToWorker(ResultSet resultSet) throws SQLException {
+        WorkerDTO workerDTO = new WorkerDTO();
+        long id = resultSet.getLong("id");
+        Date creationDate = resultSet.getDate("creation_date");
+        workerDTO.setName(resultSet.getString("name"));
+        workerDTO.setSalary(resultSet.getDouble("salary"));
+        workerDTO.setStartDate(resultSet.getDate("start_date"));
+        workerDTO.setPosition(Position.values()[resultSet.getInt("position")]);
+        workerDTO.setStatus(Status.values()[resultSet.getInt("status")]);
+        workerDTO.setPerson(new Person(
+                resultSet.getDate("p_birthday"),
+                Color.values()[resultSet.getInt("p_hair_color")],
+                Country.values()[resultSet.getInt("p_hair_color")],
+                new Location(
+                        resultSet.getDouble("p_loc_x"),
+                        resultSet.getDouble("p_loc_y"),
+                        resultSet.getDouble("p_loc_z"),
+                        resultSet.getString("p_loc_name")
+                )
+        ));
+        return new Worker(id, workerDTO, creationDate);
     }
 }

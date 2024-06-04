@@ -9,9 +9,6 @@ import lab_6.common.network.Response;
 
 public class RemoveGreater implements Command {
 
-    /**
-     *
-     */
     @Override
     public void execute(String arg) {
         System.out.println("Начинается генерации работяги для сравнения!!!");
