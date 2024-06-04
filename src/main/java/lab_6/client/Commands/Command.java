@@ -4,4 +4,8 @@ public interface Command {
     void execute(String arg);
 
     String description();
+
+    default boolean needToAuthorize() {
+        return true;
+    }
 }

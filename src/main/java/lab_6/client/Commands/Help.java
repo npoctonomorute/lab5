@@ -24,4 +24,8 @@ public class Help implements Command {
     public String description() {
         return ("help — помощь, вывод справки по доступным командам и формату их использования");
     }
+
+    public boolean needToAuthorize() {
+        return false;
+    }
 }

@@ -9,16 +9,18 @@ import java.io.Serializable;
 import java.util.Map;
 
 public class Router {
-    private final Map<ActionAlias, Action<?>> routeList = Map.of(
-            ActionAlias.SHOW, new ShowAction(),
-            ActionAlias.ADD, new CreateAction(),
-            ActionAlias.UPDATE, new UpdateAction(),
-            ActionAlias.REMOVE, new DeleteAction(),
-            ActionAlias.REMOVE_LOWER, new RemoveLowerAction(),
-            ActionAlias.INFO, new InfoAction(),
-            ActionAlias.REMOVE_GREATER, new RemoveGreaterAction(),
-            ActionAlias.FILTER_BY_PERSON, new FilterByPersonAction(),
-            ActionAlias.CLEAR, new ClearAction()
+    private final Map<ActionAlias, Action<?>> routeList = Map.ofEntries(
+            Map.entry(ActionAlias.SHOW, new ShowAction()),
+            Map.entry(ActionAlias.ADD, new CreateAction()),
+            Map.entry(ActionAlias.UPDATE, new UpdateAction()),
+            Map.entry(ActionAlias.REMOVE, new DeleteAction()),
+            Map.entry(ActionAlias.REMOVE_LOWER, new RemoveLowerAction()),
+            Map.entry(ActionAlias.INFO, new InfoAction()),
+            Map.entry(ActionAlias.REMOVE_GREATER, new RemoveGreaterAction()),
+            Map.entry(ActionAlias.FILTER_BY_PERSON, new FilterByPersonAction()),
+            Map.entry(ActionAlias.CLEAR, new ClearAction()),
+            Map.entry(ActionAlias.LOGIN, new LoginAction()),
+            Map.entry(ActionAlias.REGISTER, new RegisterAction())
     );
 
     public Response resolve(Request request) {

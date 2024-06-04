@@ -9,11 +9,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class ConsoleInputValidator {
-    /**
-     * @return
-     * @throws EmptyStringException
-     */
-    public static String getNonEmptyInput() throws EmptyStringException {
+    public static String getNonEmptyInput() {
         Scanner sc = ClientAppContainer.getSc();
         String inputString = null;
         do {

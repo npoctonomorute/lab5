@@ -21,6 +21,8 @@ public class Invoker {
         commands.put("filter_by_person", new FilterByPerson());
         commands.put("show", new Show());
         commands.put("execute_script", new ExecuteScript());
+        commands.put("login", new Login());
+        commands.put("register", new Register());
     }
 
     public void invoke(String req) {
@@ -32,7 +34,11 @@ public class Invoker {
         }
         if (commands.containsKey(commandName)) {
             Command com = commands.get(commandName);
-            com.execute(arg);
+            if (com.needToAuthorize() && !ClientAppContainer.isLoggedIn()) {
+                System.out.println("Для начала необходимо войти в аккаунт");
+            } else {
+                com.execute(arg);
+            }
         } else {
             System.out.println("Сори, нет такой команды.");
         }

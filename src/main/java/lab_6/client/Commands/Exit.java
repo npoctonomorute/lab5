@@ -16,4 +16,8 @@ public class Exit implements Command {
     public String description() {
         return "exit - завершить программу (без сохранения в файл)";
     }
+
+    public boolean needToAuthorize() {
+        return false;
+    }
 }

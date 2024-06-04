@@ -11,4 +11,6 @@ public enum ActionAlias {
     REMOVE_GREATER,
     FILTER_BY_PERSON,
     CLEAR,
+    LOGIN,
+    REGISTER,
 }

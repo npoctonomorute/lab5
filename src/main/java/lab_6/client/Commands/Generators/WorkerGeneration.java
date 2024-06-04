@@ -3,7 +3,6 @@ package lab_6.client.Commands.Generators;
 import lab_6.client.App.ClientAppContainer;
 import lab_6.client.Commands.Exceptions.ConsoleInputValidator;
 import lab_6.client.Commands.Exceptions.DoubleInputException;
-import lab_6.client.Commands.Exceptions.EmptyStringException;
 import lab_6.client.Commands.Exceptions.IntInputException;
 import lab_6.common.Classes.*;
 import lab_6.common.Classes.dto.WorkerDTO;
@@ -20,12 +19,12 @@ public class WorkerGeneration {
 
         System.out.println("Введите имя: ");
         String name = null;
-        try {
-            name = ConsoleInputValidator.getNonEmptyInput();
-        } catch (EmptyStringException e) {
-            System.out.println(e.getMessage());
-            System.out.println("Введите имя: ");
-        }
+//        try {
+        name = ConsoleInputValidator.getNonEmptyInput();
+//        } catch (EmptyStringException e) {
+//            System.out.println(e.getMessage());
+//            System.out.println("Введите имя: ");
+//        }
 
         System.out.println("Введите дату рождения в формате (ДД.ММ.ГГГГ): ");
         String birthdayStr1 = sc.nextLine().trim().toLowerCase();
@@ -96,12 +95,12 @@ public class WorkerGeneration {
         }
 
         System.out.println("Введите название локации: ");
-        try {
-            locationName = ConsoleInputValidator.getNonEmptyInput();
-        } catch (EmptyStringException e) {
-            System.out.println(e.getMessage());
-            System.out.println("Введите название локации: ");
-        }
+//        try {
+        locationName = ConsoleInputValidator.getNonEmptyInput();
+//        } catch (EmptyStringException e) {
+//            System.out.println(e.getMessage());
+//            System.out.println("Введите название локации: ");
+//        }
         System.out.println("Введите размер зарплаты: ");
         double salary = 0;
         try {
