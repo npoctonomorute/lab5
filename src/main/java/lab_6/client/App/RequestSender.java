@@ -26,12 +26,12 @@ public class RequestSender {
 
             byte[] receiveData = new byte[8192];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-            socket.receive(receivePacket);
             socket.setSoTimeout(10000);
+            socket.receive(receivePacket);
             String serializedResponse = new String(receivePacket.getData(), 0, receivePacket.getLength());
             return (Response) Serializer.deserializeFromString(serializedResponse);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new ServerUnavailableException(e);
         }
     }
 }

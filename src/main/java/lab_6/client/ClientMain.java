@@ -2,6 +2,7 @@ package lab_6.client;
 
 import lab_6.client.App.ClientAppContainer;
 import lab_6.client.App.Invoker;
+import lab_6.client.App.ServerUnavailableException;
 
 import java.util.Scanner;
 
@@ -13,7 +14,11 @@ public class ClientMain {
         Invoker invoker = new Invoker();
         while (sc.hasNextLine()) {
             String line = sc.nextLine().trim().toLowerCase(); //обрезает пробелы + нижний регистр
-            invoker.invoke(line);
+            try {
+                invoker.invoke(line);
+            } catch (ServerUnavailableException e) {
+                System.out.println("Сорри, сервер недоступен. Попробуй позже");
+            }
         }
     }
 }
