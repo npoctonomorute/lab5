@@ -92,6 +92,7 @@ public class Worker implements Comparable<Worker>, Serializable {
                 ", position=" + position +
                 ", status=" + status +
                 ", person=" + person +
+                ", ownerLogin='" + ownerLogin + '\'' +
                 '}';
     }
 }
