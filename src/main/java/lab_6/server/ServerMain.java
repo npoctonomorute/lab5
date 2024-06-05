@@ -22,11 +22,11 @@ import java.util.concurrent.ForkJoinPool;
 
 public class ServerMain {
     public static final int SERVER_PORT = 22335;
-    public static final String STORAGE_FILE = "amogus.json";
+    //public static final String STORAGE_FILE = "amogus.json";
 
-    public static final String DB_URL = "jdbc:postgresql://localhost:5432/makar";
-    public static final String DB_USER = "postgres";
-    public static final String DB_PASSWORD = "root";
+    public static final String DB_URL = "jdbc:postgresql://pg:5432/studs"; //"jdbc:postgresql://localhost:5432/makar"
+    public static final String DB_USER = "s408180"; //"postgres"
+    public static final String DB_PASSWORD = "Ht57z7olN3N7AAi4"; //"root"
 
     public static void main(String[] args) {
         connectDB();
@@ -45,12 +45,12 @@ public class ServerMain {
                 System.out.println("UDP сервер запущен...");
                 Router router = new Router();
 
-                while (true) {
+                while (!Thread.currentThread().isInterrupted()) {
                     DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
                     socket.receive(receivePacket);
                     String message = new String(receivePacket.getData(), 0, receivePacket.getLength());
                     Request request = (Request) Serializer.deserializeFromString(message);
-
+ 
                     System.out.println("Получен запрос: " + request.getActionAlias());
                     if (request.getData() != null) {
                         System.out.println("Данные: " + request.getData());
@@ -88,7 +88,8 @@ public class ServerMain {
             }
         }
         System.out.println("Сервер остановлен");
-        forkJoinPool.shutdown();
+        forkJoinPool.shutdownNow();
+
     }
 
     private static void connectDB() {

@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBMigration {
-    public static final String DB_URL = "jdbc:postgresql://localhost:5432/makar";
-    public static final String DB_USER = "postgres";
-    public static final String DB_PASSWORD = "root";
+    public static final String DB_URL = "jdbc:postgresql://pg:5432/studs";
+    public static final String DB_USER = "s408180";
+    public static final String DB_PASSWORD = "Ht57z7olN3N7AAi4";
 
     public static void main(String[] args) throws SQLException {
         try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {

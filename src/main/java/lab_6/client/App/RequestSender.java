@@ -26,7 +26,7 @@ public class RequestSender {
 
             byte[] receiveData = new byte[8192];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-            socket.setSoTimeout(10000);
+            socket.setSoTimeout(5000);
             socket.receive(receivePacket);
             String serializedResponse = new String(receivePacket.getData(), 0, receivePacket.getLength());
             return (Response) Serializer.deserializeFromString(serializedResponse);

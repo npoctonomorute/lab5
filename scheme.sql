@@ -14,14 +14,14 @@ CREATE TABLE IF NOT EXISTS workers
     p_loc_y       double precision,
     p_loc_z       double precision,
     p_loc_name    varchar(255),
-    owner_login varchar(255) NOT NULL,
+    owner_login   varchar(255)     NOT NULL,
     CONSTRAINT workers_pkey PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE IF NOT EXISTS public.users
 (
-    id bigserial,
-    login varchar(255) NOT NULL,
+    id       bigserial,
+    login    varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
     CONSTRAINT users_pkey PRIMARY KEY (id),
     CONSTRAINT login_unique UNIQUE (login)
